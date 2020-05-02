@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
     paddingLeft: 10,
+    marginBottom: 15
   },
   imageContainer: {
     shadowOffset: { width: 10, height: 10 },

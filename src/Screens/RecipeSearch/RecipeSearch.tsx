@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { Text, View, ScrollView, Image, TextInput } from "react-native";
+import { Placeholder, PlaceholderMedia, PlaceholderLine, Fade } from "rn-placeholder";
 
 import { styles } from "./style";
 
@@ -49,6 +50,35 @@ class RecipeSearch extends Component {
             style={styles.searchBox}
             onSubmitEditing={(event) => this.getSearchQuery(event.nativeEvent.text)}
           />
+          {this.props.recipeSearch.loading ? (
+            <>
+              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: 1}}>
+                <PlaceholderLine width={80} />
+                <PlaceholderLine />
+                <PlaceholderLine width={30} />
+              </Placeholder>
+              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .5}}>
+                <PlaceholderLine width={80} />
+                <PlaceholderLine />
+                <PlaceholderLine width={30} />
+              </Placeholder>
+              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .3}}>
+                <PlaceholderLine width={80} />
+                <PlaceholderLine />
+                <PlaceholderLine width={30} />
+              </Placeholder>
+              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .1}}>
+                <PlaceholderLine width={80} />
+                <PlaceholderLine />
+                <PlaceholderLine width={30} />
+              </Placeholder>
+              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .1}}>
+                <PlaceholderLine width={80} />
+                <PlaceholderLine />
+                <PlaceholderLine width={30} />
+              </Placeholder>
+            </>
+          ) : null}
         </View>
       </>
     );
