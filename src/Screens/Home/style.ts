@@ -3,15 +3,15 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   emptyContainer: {
     alignContent: "center",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
   },
   emptyImage: {
     height: 200,
     width: 450,
     marginRight: 10,
-    backgroundColor: "#fff",
-    shadowOffset: { width: 10, height: 10 },
-    shadowColor: "#000",
-    shadowOpacity: 1,
   },
   container: {
     padding: 10,
@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#fff",
     display: "flex",
     flexDirection: "row",
+    paddingBottom: 45
   },
   imageContainer: {
     shadowOffset: { width: 10, height: 10 },
@@ -31,10 +32,6 @@ export const styles = StyleSheet.create({
     height: 80,
     width: 80,
     marginRight: 10,
-    backgroundColor: "#fff",
-    shadowOffset: { width: 10, height: 10 },
-    shadowColor: "#000",
-    shadowOpacity: 1,
   },
   primaryText: {
     fontSize: 19,
@@ -54,17 +51,17 @@ export const styles = StyleSheet.create({
   recepieSearchText: {
     color: "#6d4c41",
     fontSize: 20,
-    marginBottom: 20
+    marginBottom: 20,
   },
   nutritionAnalysisText: {
     color: "#6d4c41",
     fontSize: 20,
-    marginBottom: 20
+    marginBottom: 20,
   },
   searchContainer: {
     padding: 20,
     backgroundColor: "#fff3e0",
     margin: 20,
     borderRadius: 15,
-  }
+  },
 });
