@@ -1,15 +1,27 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import { Text, View, ScrollView, Image, TextInput } from "react-native";
 
 import { styles } from "./style";
 
-export default class RecipeSearch extends Component {
+import { getRecipesAction } from "../../Redux/Actions/RecipeSearchActions";
+
+class RecipeSearch extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      recipes: [],
+    };
   }
 
-  getSearchQuery = () => {};
+  componentDidUpdate() {}
+
+  getSearchQuery = (query) => {
+    if (query) {
+      this.props.dispatch(getRecipesAction(query));
+    }
+  };
 
   render() {
     return (
@@ -37,3 +49,13 @@ export default class RecipeSearch extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  recipeSearch: {
+    recipe: state.recipeSearchReducer.recipe,
+    loading: state.recipeSearchReducer.recipe,
+    error: state.recipeSearchReducer.error,
+  },
+});
+
+export default connect(mapStateToProps, null)(RecipeSearch);

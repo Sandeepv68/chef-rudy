@@ -108,6 +108,6 @@ export const config = {
     // `httpAgent` and `httpsAgent` define a custom agent to be used when performing http
     // and https requests, respectively, in node.js. This allows to configure options like
     // `keepAlive` that are not enabled by default.
-    httpAgent: new http.Agent({ keepAlive: true }),
-    httpsAgent: new https.Agent({ keepAlive: true })
+    // httpAgent: new http.Agent({ keepAlive: true }),
+    // httpsAgent: new https.Agent({ keepAlive: true })
   }

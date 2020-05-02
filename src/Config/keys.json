@@ -1,0 +1,14 @@
+{
+    "recipe_search": {
+        "app_id": "40ac9d3c",
+        "app_key": "dbe0d30e3a2a7b0d1f3609f85186af40"
+    },
+    "nutrition_analysis": {
+      "app_id": "68976414",
+      "app_key": "7ab5908a16969125c0b284b621b88332"
+    },
+    "food_db":{
+      "app_id": "970ea192",
+      "app_key": "0207e75d9b3cf8381880a513d281a657"
+    }
+}

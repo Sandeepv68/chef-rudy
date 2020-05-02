@@ -10,6 +10,7 @@
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.2.3",
     "@react-navigation/stack": "^5.2.18",
+    "axios": "^0.19.2",
     "expo": "~37.0.3",
     "expo-updates": "~0.1.0",
     "react": "~16.9.0",
@@ -22,7 +23,10 @@
     "react-native-svg": "^12.1.0",
     "react-native-svg-transformer": "^0.14.3",
     "react-native-unimodules": "~0.9.0",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.11.7",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
@@ -34,5 +38,25 @@
     "babel-preset-expo": "~8.1.0",
     "typescript": "~3.8.3"
   },
-  "private": true
+  "private": true,
+  "name": "chef-rudy",
+  "description": "A sample react-native app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandeepVattapparambil/chef-rudy.git"
+  },
+  "keywords": [
+    "chef",
+    "chefRudy",
+    "Sandeep",
+    "ReactNative"
+  ],
+  "author": "Sandeep Vattapparambil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SandeepVattapparambil/chef-rudy/issues"
+  },
+  "homepage": "https://github.com/SandeepVattapparambil/chef-rudy#readme"
 }
