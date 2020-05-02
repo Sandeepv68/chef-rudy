@@ -16,12 +16,9 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
     paddingLeft: 10,
-    marginBottom: 15
+    marginBottom: 15,
   },
   imageContainer: {
-    shadowOffset: { width: 10, height: 10 },
-    shadowColor: "black",
-    shadowOpacity: 1,
     backgroundColor: "#0000",
     padding: 10,
   },
@@ -39,5 +36,43 @@ export const styles = StyleSheet.create({
     display: "flex",
     alignContent: "center",
     paddingTop: 40,
+  },
+  noResultsContainer: {
+    alignContent: "center",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    flex: 1,
+  },
+  noResultsFound: {
+    height: 200,
+    width: 200,
+  },
+  noResultsText: {
+    color: "#757575",
+  },
+  resultItemContainer: {
+    display: "flex",
+    flexDirection: "row",
+    backgroundColor: "#fff3e0",
+    borderRadius: 22,
+    marginBottom: 15,
+  },
+  resultImage: {
+    height: 100,
+    width: 100,
+    borderBottomLeftRadius: 22,
+    borderTopLeftRadius: 22,
+  },
+  itemName: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#795548",
+    padding: 10,
+    flexShrink: 1,
+  },
+  scrollResults: {
+    flex: 1,
   },
 });

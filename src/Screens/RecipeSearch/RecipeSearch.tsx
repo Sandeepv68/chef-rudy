@@ -17,7 +17,11 @@ class RecipeSearch extends Component {
   }
 
   componentDidUpdate(prevProps, pervState) {
-    if (this.props.recipeSearch.recipe !== prevProps.recipeSearch.recipe) {
+    if (
+      this.props.recipeSearch.recipe &&
+      this.props.recipeSearch.recipe !== prevProps.recipeSearch.recipe &&
+      this.props.recipeSearch.recipe.hits
+    ) {
       this.setState({
         recipes: this.props.recipeSearch.recipe.hits,
       });
@@ -52,32 +56,83 @@ class RecipeSearch extends Component {
           />
           {this.props.recipeSearch.loading ? (
             <>
-              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: 1}}>
+              <Placeholder
+                Animation={Fade}
+                Left={PlaceholderMedia}
+                style={{ opacity: 1 }}
+              >
                 <PlaceholderLine width={80} />
                 <PlaceholderLine />
                 <PlaceholderLine width={30} />
               </Placeholder>
-              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .5}}>
+              <Placeholder
+                Animation={Fade}
+                Left={PlaceholderMedia}
+                style={{ opacity: 0.5 }}
+              >
                 <PlaceholderLine width={80} />
                 <PlaceholderLine />
                 <PlaceholderLine width={30} />
               </Placeholder>
-              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .3}}>
+              <Placeholder
+                Animation={Fade}
+                Left={PlaceholderMedia}
+                style={{ opacity: 0.3 }}
+              >
                 <PlaceholderLine width={80} />
                 <PlaceholderLine />
                 <PlaceholderLine width={30} />
               </Placeholder>
-              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .1}}>
+              <Placeholder
+                Animation={Fade}
+                Left={PlaceholderMedia}
+                style={{ opacity: 0.1 }}
+              >
                 <PlaceholderLine width={80} />
                 <PlaceholderLine />
                 <PlaceholderLine width={30} />
               </Placeholder>
-              <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{opacity: .1}}>
+              <Placeholder
+                Animation={Fade}
+                Left={PlaceholderMedia}
+                style={{ opacity: 0.1 }}
+              >
                 <PlaceholderLine width={80} />
                 <PlaceholderLine />
                 <PlaceholderLine width={30} />
               </Placeholder>
             </>
+          ) : null}
+
+          {this.state.recipes.length == 0 && !this.props.recipeSearch.loading ? (
+            <View style={styles.noResultsContainer}>
+              <Image
+                source={require("../../../assets/no_results.png")}
+                style={styles.noResultsFound}
+              ></Image>
+              <Text style={styles.noResultsText}>
+                I couldn't find anything that matches your taste,
+              </Text>
+              <Text style={styles.noResultsText}>Please search again....</Text>
+            </View>
+          ) : null}
+
+          {this.state.recipes.length > 0 && !this.props.recipeSearch.loading ? (
+            <ScrollView style={styles.scrollResults} showsVerticalScrollIndicator={false}>
+              {this.state.recipes.map((item, key) => {
+                return (
+                  <View key={key} style={styles.resultItemContainer}>
+                    <Image
+                      source={{ uri: `${item.recipe.image}` }}
+                      style={styles.resultImage}
+                    ></Image>
+                    <Text style={styles.itemName} numberOfLines={1}>
+                      {item.recipe.label}
+                    </Text>
+                  </View>
+                );
+              })}
+            </ScrollView>
           ) : null}
         </View>
       </>

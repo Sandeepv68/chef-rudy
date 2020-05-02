@@ -21,12 +21,12 @@ export const recipeSearchReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        recipe: action,
+        recipe: action.payload,
       };
     case GET_RECIPES_ERROR:
       return {
         ...state,
-        error: action,
+        error: action.payload,
       };
     default:
       return state;
