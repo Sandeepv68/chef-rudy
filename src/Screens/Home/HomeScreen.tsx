@@ -36,24 +36,23 @@ export default class HomeScreen extends Component {
           ></Image>
           <View style={styles.searchContainer}>
             <Text style={styles.recepieSearchText}>
-              Chef Rudy is here to help you cook your favourite recipes, I can
-              also help you learn something new...
+              Chef Rudy is here to help you cook your favourite recipes, I can also help
+              you learn something new...
             </Text>
             <CustomButton
               onPress={this.gotoRecepieSearch}
-              styles={{ backgroundColor: "#ff8a65" }}
+              styles={{ backgroundColor: "#ff5722" }}
             >
               Recipe Search
             </CustomButton>
           </View>
           <View style={styles.searchContainer}>
             <Text style={styles.nutritionAnalysisText}>
-              I can also perform nutritional analysis on your meals, or its
-              ingredients..
+              I can also perform nutritional analysis on your meals, or its ingredients..
             </Text>
             <CustomButton
               onPress={this.gotoMealAnalysis}
-              styles={{ backgroundColor: "#ff5722" }}
+              styles={{ backgroundColor: "#ff8a65" }}
             >
               Analyze Meal
             </CustomButton>

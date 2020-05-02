@@ -22,9 +22,7 @@ export default class RecipeSearch extends Component {
             ></Image>
           </View>
           <View style={styles.headerTextBoxContainer}>
-            <Text style={styles.primaryText}>
-              Let's find something to cook...{" "}
-            </Text>
+            <Text style={styles.primaryText}>Let's find something to cook... </Text>
           </View>
         </View>
         <View style={styles.searchBoxContainer}>
@@ -32,9 +30,7 @@ export default class RecipeSearch extends Component {
             onChangeText={this.getSearchQuery}
             placeholder="eg, Kale salad, Chole Bhatura, Lasagne.."
             style={styles.searchBox}
-            onSubmitEditing={(event) =>
-              this.getSearchQuery(event.nativeEvent.text)
-            }
+            onSubmitEditing={(event) => this.getSearchQuery(event.nativeEvent.text)}
           />
         </View>
       </>

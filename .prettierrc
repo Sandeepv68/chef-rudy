@@ -1,0 +1,14 @@
+{
+    parser: "flow",
+    printWidth: 90,
+    tabWidth: 2,
+    useTabs: false,
+    semi: true,
+    encoding: "utf-8",
+    extensions: [
+        ".js",
+        ".ts",
+        ".tsx",
+        ".jsx"
+    ]
+}
