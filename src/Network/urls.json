@@ -1,0 +1,12 @@
+{
+  "root": "https://api.edamam.com",
+  "recipe_search": {
+    "base": "search"
+  },
+  "nutrition_analysis": {
+    "base": "nutrition-details"
+  },
+  "food_data_base": {
+    "base": "api/food-database/parser"
+  }
+}

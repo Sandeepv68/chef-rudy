@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
+    paddingBottom: 45,
   },
   emptyImage: {
     height: 200,
@@ -19,7 +20,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#fff",
     display: "flex",
     flexDirection: "row",
-    paddingBottom: 45
+    flex: 1
   },
   imageContainer: {
     shadowOffset: { width: 10, height: 10 },
@@ -50,12 +51,12 @@ export const styles = StyleSheet.create({
   },
   recepieSearchText: {
     color: "#6d4c41",
-    fontSize: 20,
+    fontSize: 15,
     marginBottom: 20,
   },
   nutritionAnalysisText: {
     color: "#6d4c41",
-    fontSize: 20,
+    fontSize: 15,
     marginBottom: 20,
   },
   searchContainer: {
