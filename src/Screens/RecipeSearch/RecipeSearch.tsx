@@ -15,11 +15,17 @@ class RecipeSearch extends Component {
     };
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate(prevProps, pervState) {
+    if (this.props.recipeSearch.recipe !== prevProps.recipeSearch.recipe) {
+      this.setState({
+        recipes: this.props.recipeSearch.recipe.hits,
+      });
+    }
+  }
 
   getSearchQuery = (query) => {
-    if (query) {
-      this.props.dispatch(getRecipesAction(query));
+    if (query && query.length) {
+      return this.props.dispatch(getRecipesAction(query));
     }
   };
 
@@ -39,7 +45,6 @@ class RecipeSearch extends Component {
         </View>
         <View style={styles.searchBoxContainer}>
           <TextInput
-            onChangeText={this.getSearchQuery}
             placeholder="eg, Kale salad, Chole Bhatura, Lasagne.."
             style={styles.searchBox}
             onSubmitEditing={(event) => this.getSearchQuery(event.nativeEvent.text)}
@@ -53,7 +58,7 @@ class RecipeSearch extends Component {
 const mapStateToProps = (state) => ({
   recipeSearch: {
     recipe: state.recipeSearchReducer.recipe,
-    loading: state.recipeSearchReducer.recipe,
+    loading: state.recipeSearchReducer.loading,
     error: state.recipeSearchReducer.error,
   },
 });

@@ -1,7 +1,7 @@
 {
   "root": "https://api.edamam.com",
   "recipe_search": {
-    "base": "search"
+    "base": "/search"
   },
   "nutrition_analysis": {
     "base": "nutrition-details"

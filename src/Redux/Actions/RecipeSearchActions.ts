@@ -14,21 +14,28 @@ let ajax = new Ajax();
  * Get Recipes
  */
 export const getRecipesAction = (query) => {
-  dispatch(getRecipesBegin());
-  getRecipes(query)
-    .then((response) => {
-      dispatch(getRecipesSuccess(response));
-      return;
-    })
-    .catch((error) => {
-      dispatch(getRecipesError(error));
-      return;
-    });
+  return (dispatch) => {
+    dispatch(getRecipesBegin());
+    return getRecipes(query)
+      .then((response) => {
+        dispatch(getRecipesSuccess(response));
+        return;
+      })
+      .catch((error) => {
+        dispatch(getRecipesError(error));
+        return;
+      });
+  };
 };
 
-const getRecipes = (query) => {
-  let url = URL_SCHEMA.root + URL_SCHEMA.recipe_search;
-  return ajax.makeRequest(url, "GET", {}, {});
+const getRecipes = (searchQuery) => {
+  let query = {
+    q: searchQuery,
+    app_id: KEYS.recipe_search.app_id,
+    app_key: KEYS.recipe_search.app_key,
+  };
+  let url = URL_SCHEMA.root + URL_SCHEMA.recipe_search.base;
+  return ajax.makeRequest(url, "GET", { ...query }, {});
 };
 
 const getRecipesBegin = () => {
@@ -40,7 +47,7 @@ const getRecipesBegin = () => {
 const getRecipesSuccess = (response) => {
   return {
     type: GET_RECIPES_SUCCESS,
-    payload: response,
+    payload: response.data,
   };
 };
 
