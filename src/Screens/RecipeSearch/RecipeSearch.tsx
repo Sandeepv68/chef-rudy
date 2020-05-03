@@ -8,6 +8,8 @@ import { styles } from "./style";
 
 import { getRecipesAction } from "../../Redux/Actions/RecipeSearchActions";
 
+import data from "./data.json";
+
 class RecipeSearch extends Component {
   constructor(props) {
     super(props);
@@ -104,7 +106,7 @@ class RecipeSearch extends Component {
             </>
           ) : null}
 
-          {this.state.recipes.length == 0 && !this.props.recipeSearch.loading ? (
+          {/* {this.state.recipes.length == 0 && !this.props.recipeSearch.loading ? (
             <View style={styles.noResultsContainer}>
               <Image
                 source={require("../../../assets/no_results.png")}
@@ -115,20 +117,33 @@ class RecipeSearch extends Component {
               </Text>
               <Text style={styles.noResultsText}>Please search again....</Text>
             </View>
-          ) : null}
+          ) : null} */}
 
-          {this.state.recipes.length > 0 && !this.props.recipeSearch.loading ? (
+          {data.length > 0 && !this.props.recipeSearch.loading ? (
             <ScrollView style={styles.scrollResults} showsVerticalScrollIndicator={false}>
-              {this.state.recipes.map((item, key) => {
+              {data.map((item, key) => {
                 return (
                   <View key={key} style={styles.resultItemContainer}>
-                    <Image
-                      source={{ uri: `${item.recipe.image}` }}
-                      style={styles.resultImage}
-                    ></Image>
-                    <Text style={styles.itemName} numberOfLines={1}>
-                      {item.recipe.label}
-                    </Text>
+                    <View style={styles.resultImageContainer}>
+                      <Image
+                        source={{ uri: `${item.recipe.image}` }}
+                        style={styles.resultImage}
+                      ></Image>
+                    </View>
+                    <View style={styles.textDataContainer}>
+                      <Text style={styles.itemName} numberOfLines={1}>
+                        {item.recipe.label}
+                      </Text>
+                      <View style={styles.sourceRow}>
+                        <Image
+                          source={require("../../../assets/user.png")}
+                          style={styles.sourceIcon}
+                        ></Image>
+                        <Text style={styles.sourceName} numberOfLines={1}>
+                          {item.recipe.source}
+                        </Text>
+                      </View>
+                    </View>
                   </View>
                 );
               })}
