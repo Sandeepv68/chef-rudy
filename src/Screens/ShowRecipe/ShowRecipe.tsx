@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import { CustomButton } from "../../Components/Button/Button";
 import {
   Text,
   View,
@@ -7,6 +8,7 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
+  Linking,
 } from "react-native";
 import { styles } from "./style";
 
@@ -21,6 +23,16 @@ export default class ShowRecipe extends Component {
   changeTab = (tab) => {
     this.setState({
       activeTab: tab,
+    });
+  };
+
+  gotoSourceWebsite = (url) => {
+    Linking.canOpenURL(url).then((supported) => {
+      if (supported) {
+        Linking.openURL(url);
+      } else {
+        console.log("Don't know how to open URI: " + url);
+      }
     });
   };
 
@@ -91,13 +103,29 @@ export default class ShowRecipe extends Component {
               showsVerticalScrollIndicator={false}
               style={styles.ingredientsScroll}
             >
-              {data.ingredientLines.map((item, key) => {
-                return (
-                  <Text key={key} style={styles.ingredient}>
-                    {key + 1}) {item}
+              {this.state.activeTab === "ingredients"
+                ? data.ingredientLines.map((item, key) => {
+                    return (
+                      <Text key={key} style={styles.ingredient}>
+                        {key + 1}) {item}
+                      </Text>
+                    );
+                  })
+                : null}
+
+              {this.state.activeTab === "preparation" ? (
+                <View>
+                  <Text style={styles.preparationDetails}>
+                    No preparation details available...
                   </Text>
-                );
-              })}
+                  <CustomButton
+                    onPress={(e) => this.gotoSourceWebsite(data.url)}
+                    styles={{ backgroundColor: "#ff5722" }}
+                  >
+                    Go to {data.source}
+                  </CustomButton>
+                </View>
+              ) : null}
             </ScrollView>
           </View>
         </View>

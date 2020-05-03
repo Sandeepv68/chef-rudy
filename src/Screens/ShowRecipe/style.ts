@@ -79,10 +79,14 @@ export const styles = StyleSheet.create({
     padding: 15,
     marginTop: 20,
     borderRadius: 10,
-    marginBottom: 220,
+    marginBottom: 260,
     backgroundColor: "#fff3e0",
   },
   ingredient: {
     color: "#bcaaa4",
+  },
+  preparationDetails: {
+    color: "#bcaaa4",
+    marginBottom: 20,
   },
 });
