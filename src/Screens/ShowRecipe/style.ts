@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     borderRadius: 22,
   },
   recipeImage: { height: 200, width: 200, borderRadius: 22 },
-  scrollView: { top: 120 },
+  infoContainer: { top: 120, flex: 1 },
   detailsView: { flexDirection: "column" },
   recipeLabel: {
     textAlign: "center",
@@ -51,5 +51,38 @@ export const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     borderRadius: 22,
+  },
+  RecipeInfoContainer: {
+    marginTop: 20,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  tabBar: {
+    flexDirection: "row",
+  },
+  sectionTitleActive: {
+    padding: 10,
+    fontSize: 18,
+    color: "#bf360c",
+    marginRight: 15,
+    fontWeight: "bold",
+    borderBottomWidth: 2,
+    borderBottomColor: "#bf360c",
+  },
+  sectionTitle: {
+    fontSize: 18,
+    color: "#ccc",
+    marginRight: 15,
+    padding: 10,
+  },
+  ingredientsScroll: {
+    padding: 15,
+    marginTop: 20,
+    borderRadius: 10,
+    marginBottom: 220,
+    backgroundColor: "#fff3e0",
+  },
+  ingredient: {
+    color: "#bcaaa4",
   },
 });
