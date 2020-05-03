@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { Text, View, ScrollView, Image, TextInput } from "react-native";
+import { Text, View, ScrollView, Image, TextInput, TouchableOpacity } from "react-native";
 import { Placeholder, PlaceholderMedia, PlaceholderLine, Fade } from "rn-placeholder";
 
 import { styles } from "./style";
@@ -36,6 +36,10 @@ class RecipeSearch extends Component {
     }
   };
 
+  goToRecipe = (recipe) => {
+    this.props.navigation.navigate("Show", { recipeData: recipe });
+  };
+
   render() {
     return (
       <>
@@ -57,7 +61,7 @@ class RecipeSearch extends Component {
             onSubmitEditing={(event) => this.getSearchQuery(event.nativeEvent.text)}
           />
           {this.props.recipeSearch.loading ? (
-            <>
+            <View style={styles.placeHolderContainer}>
               <Placeholder
                 Animation={Fade}
                 Left={PlaceholderMedia}
@@ -103,7 +107,7 @@ class RecipeSearch extends Component {
                 <PlaceholderLine />
                 <PlaceholderLine width={30} />
               </Placeholder>
-            </>
+            </View>
           ) : null}
 
           {/* {this.state.recipes.length == 0 && !this.props.recipeSearch.loading ? (
@@ -123,41 +127,55 @@ class RecipeSearch extends Component {
             <ScrollView style={styles.scrollResults} showsVerticalScrollIndicator={false}>
               {data.map((item, key) => {
                 return (
-                  <View key={key} style={styles.resultItemContainer}>
-                    <View style={styles.resultImageContainer}>
-                      <Image
-                        source={{ uri: `${item.recipe.image}` }}
-                        style={styles.resultImage}
-                      ></Image>
-                    </View>
-                    <View style={styles.textDataContainer}>
-                      <Text style={styles.itemName} numberOfLines={1}>
-                        {item.recipe.label}
-                      </Text>
-                      <View style={styles.sourceRow}>
+                  <TouchableOpacity key={key} onPress={(e) => this.goToRecipe(item)}>
+                    <View style={styles.resultItemContainer}>
+                      <View style={styles.resultImageContainer}>
                         <Image
-                          source={require("../../../assets/user.png")}
-                          style={styles.sourceIcon}
+                          source={{ uri: `${item.recipe.image}` }}
+                          style={styles.resultImage}
                         ></Image>
-                        <Text style={styles.sourceName} numberOfLines={1}>
-                          {item.recipe.source}
+                      </View>
+                      <View style={styles.textDataContainer}>
+                        <Text style={styles.itemName} numberOfLines={1}>
+                          {item.recipe.label}
                         </Text>
-                      </View>
-                      <View style={styles.healthLabelsContainer}>
-                        {item.recipe.healthLabels.map((healthLabel, key) => {
-                          return <Text key={key} style={styles.healthLabel}>{healthLabel}</Text>;
-                        })}
-                      </View>
-                      <View style={styles.healthLabelsContainer}>
-                        {item.recipe.dietLabels.map((dietLabel, key) => {
-                          return <Text key={key} style={styles.dietLabel}>{dietLabel}</Text>;
-                        })}
-                        {item.recipe.cautions.map((caution, key) => {
-                          return <Text key={key} style={styles.cautionLabel}>{caution}</Text>;
-                        })}
+                        <View style={styles.sourceRow}>
+                          <Image
+                            source={require("../../../assets/user.png")}
+                            style={styles.sourceIcon}
+                          ></Image>
+                          <Text style={styles.sourceName} numberOfLines={1}>
+                            {item.recipe.source}
+                          </Text>
+                        </View>
+                        <View style={styles.healthLabelsContainer}>
+                          {item.recipe.healthLabels.map((healthLabel, key) => {
+                            return (
+                              <Text key={key} style={styles.healthLabel}>
+                                {healthLabel}
+                              </Text>
+                            );
+                          })}
+                        </View>
+                        <View style={styles.healthLabelsContainer}>
+                          {item.recipe.dietLabels.map((dietLabel, key) => {
+                            return (
+                              <Text key={key} style={styles.dietLabel}>
+                                {dietLabel}
+                              </Text>
+                            );
+                          })}
+                          {item.recipe.cautions.map((caution, key) => {
+                            return (
+                              <Text key={key} style={styles.cautionLabel}>
+                                {caution}
+                              </Text>
+                            );
+                          })}
+                        </View>
                       </View>
                     </View>
-                  </View>
+                  </TouchableOpacity>
                 );
               })}
             </ScrollView>

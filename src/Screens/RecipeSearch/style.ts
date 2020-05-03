@@ -135,4 +135,8 @@ export const styles = StyleSheet.create({
     color: "#b71c1c",
     borderRadius: 22,
   },
+  placeHolderContainer: {
+    marginRight: 20,
+    marginLeft: 20,
+  },
 });
