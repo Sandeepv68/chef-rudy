@@ -1,3 +1,55 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({});
+export const styles = StyleSheet.create({
+  showRecipe: { flex: 1, backgroundColor: "#fff" },
+  headerImage: { height: 200, alignItems: "center" },
+  headerGradient: { resizeMode: "cover", height: 200, width: 500 },
+  recipeImageContainer: {
+    height: 200,
+    width: 200,
+    top: -100,
+    backgroundColor: "#fff",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.48,
+    shadowRadius: 11.95,
+    elevation: 5,
+    borderRadius: 22,
+  },
+  recipeImage: { height: 200, width: 200, borderRadius: 22 },
+  scrollView: { top: 120 },
+  detailsView: { flexDirection: "column" },
+  recipeLabel: {
+    textAlign: "center",
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#795548",
+  },
+  recipeSource: {
+    textAlign: "center",
+    fontSize: 12,
+    color: "#795548",
+  },
+  recipeQuickDetailsView: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  quickDetailsChips: {
+    textAlign: "center",
+    fontSize: 11,
+    color: "#795548",
+    marginRight: 10,
+    backgroundColor: "#eeeeee",
+    color: "#9e9e9e",
+    padding: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderRadius: 22,
+  },
+});

@@ -4,40 +4,33 @@ import { Text, View, ScrollView, Image, ImageBackground } from "react-native";
 import { styles } from "./style";
 
 export default function ShowRecipe(props) {
-  console.log(props.route.params.recipeData.recipe);
+  let data = props.route.params.recipeData.recipe;
   return (
-    <View style={{ flex: 1, backgroundColor: "#fff" }}>
-      <ImageBackground
-        source={{ uri: `${props.route.params.recipeData.recipe.image}` }}
-        style={{ height: 300, alignItems: "center" }}
-      >
+    <View style={styles.showRecipe}>
+      <ImageBackground source={{ uri: `${data.image}` }} style={styles.headerImage}>
         <Image
           source={require("../../../assets/gradient.png")}
-          style={{ resizeMode: "cover", height: 300, width: 500 }}
+          style={styles.headerGradient}
         ></Image>
-        <View
-          style={{
-            height: 200,
-            width: 200,
-            top: -100,
-            backgroundColor: "#fff",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 9,
-            },
-            shadowOpacity: 0.48,
-            shadowRadius: 11.95,
-            elevation: 5,
-            borderRadius: 22,
-          }}
-        >
-          <Image
-            source={{ uri: `${props.route.params.recipeData.recipe.image}` }}
-            style={{ height: 200, width: 200, borderRadius: 22 }}
-          ></Image>
+        <View style={styles.recipeImageContainer}>
+          <Image source={{ uri: `${data.image}` }} style={styles.recipeImage}></Image>
         </View>
       </ImageBackground>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.detailsView}>
+          <Text style={styles.recipeLabel}>{data.label}</Text>
+          <Text style={styles.recipeSource}>{data.source}</Text>
+        </View>
+        <View style={styles.recipeQuickDetailsView}>
+          <Text style={styles.quickDetailsChips}>{data.yield} Servings</Text>
+          <Text style={styles.quickDetailsChips}>
+            Preparation time: {data.totalTime} Mins
+          </Text>
+          <Text style={styles.quickDetailsChips}>
+            Total Calories: {data.calories.toFixed(2)}
+          </Text>
+        </View>
+      </ScrollView>
     </View>
   );
 }
