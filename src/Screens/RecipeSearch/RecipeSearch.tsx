@@ -143,6 +143,19 @@ class RecipeSearch extends Component {
                           {item.recipe.source}
                         </Text>
                       </View>
+                      <View style={styles.healthLabelsContainer}>
+                        {item.recipe.healthLabels.map((healthLabel, key) => {
+                          return <Text key={key} style={styles.healthLabel}>{healthLabel}</Text>;
+                        })}
+                      </View>
+                      <View style={styles.healthLabelsContainer}>
+                        {item.recipe.dietLabels.map((dietLabel, key) => {
+                          return <Text key={key} style={styles.dietLabel}>{dietLabel}</Text>;
+                        })}
+                        {item.recipe.cautions.map((caution, key) => {
+                          return <Text key={key} style={styles.cautionLabel}>{caution}</Text>;
+                        })}
+                      </View>
                     </View>
                   </View>
                 );
