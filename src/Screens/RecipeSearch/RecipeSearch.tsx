@@ -15,6 +15,7 @@ class RecipeSearch extends Component {
     super(props);
     this.state = {
       recipes: [],
+      displayGrid: false,
     };
   }
 
@@ -29,6 +30,12 @@ class RecipeSearch extends Component {
       });
     }
   }
+
+  toggleView = () => {
+    this.setState({
+      displayGrid: !this.state.displayGrid,
+    });
+  };
 
   getSearchQuery = (query) => {
     if (query && query.length) {
@@ -60,6 +67,31 @@ class RecipeSearch extends Component {
             style={styles.searchBox}
             onSubmitEditing={(event) => this.getSearchQuery(event.nativeEvent.text)}
           />
+          <View style={{ flexDirection: "row-reverse" }}>
+            <TouchableOpacity style={{ marginRight: 20 }} onPress={this.toggleView}>
+              {this.state.displayGrid ? (
+                <Image
+                  source={require("../../../assets/grid.png")}
+                  style={styles.toggleIcon}
+                ></Image>
+              ) : (
+                <Image
+                  source={require("../../../assets/list.png")}
+                  style={styles.toggleIcon}
+                ></Image>
+              )}
+            </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: 10,
+                color: "#9e9e9e",
+                textAlign: "right",
+                marginRight: 10,
+              }}
+            >
+              10 Recipes found
+            </Text>
+          </View>
           {this.props.recipeSearch.loading ? (
             <View style={styles.placeHolderContainer}>
               <Placeholder

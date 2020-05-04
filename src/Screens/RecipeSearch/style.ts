@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
     color: "#6d4c41",
     fontWeight: "bold",
   },
+  toggleIcon: { height: 15, width: 15, backgroundColor: "#e0e0e0",borderRadius: 2 },
   headerTextBoxContainer: {
     display: "flex",
     alignContent: "center",

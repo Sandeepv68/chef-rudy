@@ -9,6 +9,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   Linking,
+  Alert,
 } from "react-native";
 import { styles } from "./style";
 
@@ -31,7 +32,12 @@ export default class ShowRecipe extends Component {
       if (supported) {
         Linking.openURL(url);
       } else {
-        console.log("Don't know how to open URI: " + url);
+        Alert.alert(
+          "Cannot Open the link !",
+          "The wepage seems to be offline at the moment.",
+          [{ text: "OK" }],
+          { cancelable: false }
+        );
       }
     });
   };
@@ -128,29 +134,47 @@ export default class ShowRecipe extends Component {
               ) : null}
 
               {this.state.activeTab === "nutrition" ? (
-                <View style={styles.healthLabelsContainer}>
-                  {data.healthLabels.map((healthLabel, key) => {
-                    return (
-                      <Text key={key} style={styles.healthLabel}>
-                        {healthLabel}
-                      </Text>
-                    );
-                  })}
-                  {data.dietLabels.map((dietLabel, key) => {
-                    return (
-                      <Text key={key} style={styles.dietLabel}>
-                        {dietLabel}
-                      </Text>
-                    );
-                  })}
-                  {data.cautions.map((caution, key) => {
-                    return (
-                      <Text key={key} style={styles.cautionLabel}>
-                        {caution}
-                      </Text>
-                    );
-                  })}
-                </View>
+                <>
+                  <View style={styles.healthLabelsContainer}>
+                    {data.healthLabels.map((healthLabel, key) => {
+                      return (
+                        <Text key={key} style={styles.healthLabel}>
+                          {healthLabel}
+                        </Text>
+                      );
+                    })}
+                    {data.dietLabels.map((dietLabel, key) => {
+                      return (
+                        <Text key={key} style={styles.dietLabel}>
+                          {dietLabel}
+                        </Text>
+                      );
+                    })}
+                    {data.cautions.map((caution, key) => {
+                      return (
+                        <Text key={key} style={styles.cautionLabel}>
+                          {caution}
+                        </Text>
+                      );
+                    })}
+                  </View>
+                  <View style={styles.nutritionDetails}>
+                    {(() => {
+                      return Object.keys(data.totalNutrients).map((item, key) => {
+                        return (
+                          <View key={key} style={styles.nutrientsLabel}>
+                            <Text style={styles.nutrientLabel}>
+                              {data.totalNutrients[item].label}
+                            </Text>
+                            <Text style={styles.nutrientValue}>
+                              {data.totalNutrients[item].quantity.toFixed(2)}
+                            </Text>
+                          </View>
+                        );
+                      });
+                    })()}
+                  </View>
+                </>
               ) : null}
             </ScrollView>
           </View>

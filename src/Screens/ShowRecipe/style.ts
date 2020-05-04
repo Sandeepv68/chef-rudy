@@ -79,11 +79,13 @@ export const styles = StyleSheet.create({
   },
   ingredientsScroll: {
     padding: 15,
-    marginBottom: 260,
+    marginBottom: 250,
     backgroundColor: "#fafafa",
   },
   ingredient: {
     color: "#9e9e9e",
+    marginBottom: 10,
+    paddingBottom: 10,
   },
   preparationDetails: {
     color: "#9e9e9e",
@@ -130,4 +132,28 @@ export const styles = StyleSheet.create({
     borderRadius: 22,
     margin: 5,
   },
+  nutritionDetails: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginBottom: 30,
+  },
+  nutrientsLabel: {
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: '#eeeeee',
+    padding: 5,
+    paddingLeft: 8,
+    paddingRight: 8,
+    margin: 5,
+    borderRadius: 5,
+  },
+  nutrientLabel:{
+    fontSize: 10,
+    color: '#bdbdbd',
+  },
+  nutrientValue:{
+    fontSize: 15,
+    color: '#616161',
+  }
 });
