@@ -126,6 +126,32 @@ export default class ShowRecipe extends Component {
                   </CustomButton>
                 </View>
               ) : null}
+
+              {this.state.activeTab === "nutrition" ? (
+                <View style={styles.healthLabelsContainer}>
+                  {data.healthLabels.map((healthLabel, key) => {
+                    return (
+                      <Text key={key} style={styles.healthLabel}>
+                        {healthLabel}
+                      </Text>
+                    );
+                  })}
+                  {data.dietLabels.map((dietLabel, key) => {
+                    return (
+                      <Text key={key} style={styles.dietLabel}>
+                        {dietLabel}
+                      </Text>
+                    );
+                  })}
+                  {data.cautions.map((caution, key) => {
+                    return (
+                      <Text key={key} style={styles.cautionLabel}>
+                        {caution}
+                      </Text>
+                    );
+                  })}
+                </View>
+              ) : null}
             </ScrollView>
           </View>
         </View>
