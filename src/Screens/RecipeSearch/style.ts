@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     color: "#6d4c41",
     fontWeight: "bold",
   },
-  toggleIcon: { height: 15, width: 15, backgroundColor: "#e0e0e0",borderRadius: 2 },
+  toggleIcon: { height: 15, width: 15, backgroundColor: "#e0e0e0", borderRadius: 2 },
   headerTextBoxContainer: {
     display: "flex",
     alignContent: "center",
@@ -136,8 +136,44 @@ export const styles = StyleSheet.create({
     color: "#b71c1c",
     borderRadius: 22,
   },
-  placeHolderContainer: {
-    marginRight: 20,
-    marginLeft: 20,
+  gridViewContainer: {
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "row",
+    margin: 15,
+  },
+  gridViewCard: {
+    width: 200,
+    margin: 12,
+    borderRadius: 10,
+    backgroundColor: "#fff",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.48,
+    shadowRadius: 11.95,
+    elevation: 5,
+    flexShrink: 1,
+  },
+  gridThumbnail: {
+    width: 200,
+    height: 160,
+    resizeMode: "cover",
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  gridText: {
+    margin: 10,
+    fontSize: 13,
+    fontWeight: "bold",
+    color: "#795548",
+  },
+  gridSource: {
+    fontSize: 10,
+    marginLeft: 10,
+    marginBottom: 10,
+    color: "#9e9e9e",
   },
 });
