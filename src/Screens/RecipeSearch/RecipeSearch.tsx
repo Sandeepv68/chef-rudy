@@ -10,8 +10,8 @@ import {
   TouchableOpacity,
   RefreshControl,
 } from "react-native";
-
 import ListPlaceHolder from "../../Components/ListPlaceHolder/ListPlaceHolder";
+import GridPlaceHolder from "../../Components/GridPlaceHolder/GridPlaceHolder";
 
 import { styles } from "./style";
 
@@ -112,7 +112,13 @@ class RecipeSearch extends Component {
               10 Recipes found
             </Text>
           </View>
-          {this.props.recipeSearch.loading ? <ListPlaceHolder /> : null}
+
+          {this.props.recipeSearch.loading && !this.state.displayGrid ? (
+            <ListPlaceHolder />
+          ) : null}
+          {this.props.recipeSearch.loading && this.state.displayGrid ? (
+            <GridPlaceHolder />
+          ) : null}
 
           {/* {this.state.recipes.length == 0 && !this.props.recipeSearch.loading ? (
             <View style={styles.noResultsContainer}>

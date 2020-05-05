@@ -1,7 +1,10 @@
+import React from 'react';
 import { View } from "react-native";
 import { Placeholder, PlaceholderMedia, PlaceholderLine, Fade } from "rn-placeholder";
 
-export default function ListPlaceHolder(props) {
+import { styles } from "./style";
+
+export default ListPlaceHolder = (props) => {
   return (
     <View style={styles.placeHolderContainer}>
       <Placeholder Animation={Fade} Left={PlaceholderMedia} style={{ opacity: 1 }}>
@@ -31,4 +34,4 @@ export default function ListPlaceHolder(props) {
       </Placeholder>
     </View>
   );
-}
+};
