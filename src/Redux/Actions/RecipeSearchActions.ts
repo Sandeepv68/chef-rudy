@@ -28,7 +28,7 @@ export const getRecipesAction = (query, from, to) => {
   };
 };
 
-const getRecipes = (searchQuery, from = 0, to = 30) => {
+const getRecipes = (searchQuery, from = 0, to = 60) => {
   let query = {
     q: searchQuery,
     app_id: KEYS.recipe_search.app_id,
