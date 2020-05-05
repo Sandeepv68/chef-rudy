@@ -13,10 +13,10 @@ let ajax = new Ajax();
 /**
  * Get Recipes
  */
-export const getRecipesAction = (query) => {
+export const getRecipesAction = (query, from, to) => {
   return (dispatch) => {
     dispatch(getRecipesBegin());
-    return getRecipes(query)
+    return getRecipes(query, from, to)
       .then((response) => {
         dispatch(getRecipesSuccess(response));
         return;
@@ -28,11 +28,13 @@ export const getRecipesAction = (query) => {
   };
 };
 
-const getRecipes = (searchQuery) => {
+const getRecipes = (searchQuery, from = 0, to = 30) => {
   let query = {
     q: searchQuery,
     app_id: KEYS.recipe_search.app_id,
     app_key: KEYS.recipe_search.app_key,
+    from,
+    to,
   };
   let url = URL_SCHEMA.root + URL_SCHEMA.recipe_search.base;
   return ajax.makeRequest(url, "GET", { ...query }, {});

@@ -27,6 +27,8 @@ class RecipeSearch extends Component {
       recipeCount: 0,
       displayGrid: false,
       searchQuery: "",
+      from: 0,
+      to: 10,
     };
   }
 
@@ -38,6 +40,7 @@ class RecipeSearch extends Component {
     ) {
       this.setState({
         recipes: this.props.recipeSearch.recipe.hits,
+        recipeCount: this.props.recipeSearch.recipe.count,
       });
     }
   }
@@ -54,6 +57,10 @@ class RecipeSearch extends Component {
         searchQuery: query,
       });
       return this.props.dispatch(getRecipesAction(query));
+    } else {
+      this.setState({
+        recipes: [],
+      });
     }
   };
 
@@ -65,6 +72,14 @@ class RecipeSearch extends Component {
 
   goToRecipe = (recipe) => {
     this.props.navigation.navigate("Show", { recipeData: recipe });
+  };
+
+  showMoreResults = ({ nativeEvent }) => {
+    if ((nativeEvent.contentOffset.y = 500)) {
+      return this.props.dispatch(
+        getRecipesAction(this.state.searchQuery, this.state.from, this.state.to)
+      );
+    }
   };
 
   render() {
@@ -87,31 +102,33 @@ class RecipeSearch extends Component {
             style={styles.searchBox}
             onSubmitEditing={(event) => this.getSearchQuery(event.nativeEvent.text)}
           />
-          <View style={{ flexDirection: "row-reverse", marginBottom: 5 }}>
-            <TouchableOpacity style={{ marginRight: 20 }} onPress={this.toggleView}>
-              {this.state.displayGrid ? (
-                <Image
-                  source={require("../../../assets/list.png")}
-                  style={styles.toggleIcon}
-                ></Image>
-              ) : (
-                <Image
-                  source={require("../../../assets/grid.png")}
-                  style={styles.toggleIcon}
-                ></Image>
-              )}
-            </TouchableOpacity>
-            <Text
-              style={{
-                fontSize: 10,
-                color: "#9e9e9e",
-                textAlign: "right",
-                marginRight: 10,
-              }}
-            >
-              10 Recipes found
-            </Text>
-          </View>
+          {this.state.recipes.length ? (
+            <View style={{ flexDirection: "row-reverse", marginBottom: 5 }}>
+              <TouchableOpacity style={{ marginRight: 20 }} onPress={this.toggleView}>
+                {this.state.displayGrid ? (
+                  <Image
+                    source={require("../../../assets/list.png")}
+                    style={styles.toggleIcon}
+                  ></Image>
+                ) : (
+                  <Image
+                    source={require("../../../assets/grid.png")}
+                    style={styles.toggleIcon}
+                  ></Image>
+                )}
+              </TouchableOpacity>
+              <Text
+                style={{
+                  fontSize: 10,
+                  color: "#9e9e9e",
+                  textAlign: "right",
+                  marginRight: 10,
+                }}
+              >
+                {this.state.recipeCount} Recipes found
+              </Text>
+            </View>
+          ) : null}
 
           {this.props.recipeSearch.loading && !this.state.displayGrid ? (
             <ListPlaceHolder />
@@ -120,7 +137,7 @@ class RecipeSearch extends Component {
             <GridPlaceHolder />
           ) : null}
 
-          {/* {this.state.recipes.length == 0 && !this.props.recipeSearch.loading ? (
+          {this.state.recipes.length == 0 && !this.props.recipeSearch.loading ? (
             <View style={styles.noResultsContainer}>
               <Image
                 source={require("../../../assets/no_results.png")}
@@ -131,10 +148,11 @@ class RecipeSearch extends Component {
               </Text>
               <Text style={styles.noResultsText}>Please search again....</Text>
             </View>
-          ) : null} */}
+          ) : null}
 
-          {data.length > 0 && !this.props.recipeSearch.loading ? (
+          {this.state.recipes.length > 0 && !this.props.recipeSearch.loading ? (
             <ScrollView
+              fadingEdgeLength={1}
               style={styles.scrollResults}
               showsVerticalScrollIndicator={false}
               refreshControl={
@@ -143,10 +161,11 @@ class RecipeSearch extends Component {
                   onRefresh={this.refreshView}
                 />
               }
+              // onScroll={(e) => this.showMoreResults(e)}
             >
               {this.state.displayGrid ? (
                 <View style={styles.gridViewContainer}>
-                  {data.map((item, key) => {
+                  {this.state.recipes.map((item, key) => {
                     return (
                       <TouchableOpacity key={key} onPress={(e) => this.goToRecipe(item)}>
                         <View style={styles.gridViewCard}>
@@ -168,7 +187,7 @@ class RecipeSearch extends Component {
               ) : null}
 
               {!this.state.displayGrid
-                ? data.map((item, key) => {
+                ? this.state.recipes.map((item, key) => {
                     return (
                       <TouchableOpacity key={key} onPress={(e) => this.goToRecipe(item)}>
                         <View style={styles.resultItemContainer}>
