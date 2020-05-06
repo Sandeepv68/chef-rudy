@@ -1,4 +1,5 @@
 <img src="assets/rudy.png" alt="drawing" width="400"/>
+
 # chef-rudy
 A simple mobile app to help in cooking built using React Native. This app can help you search millions of recipes from around the world from its database. This app  can also help you do nutritional analysis on your favourite recipes or its ingredients. 
 
