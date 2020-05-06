@@ -1,0 +1,102 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  mainContainer: {
+    padding: 10,
+    paddingTop: 40,
+    backgroundColor: "#fff",
+    display: "flex",
+    flexDirection: "row",
+  },
+  imageContainer: {
+    backgroundColor: "#0000",
+    padding: 10,
+  },
+  rudy: {
+    height: 80,
+    width: 80,
+    marginRight: 10,
+  },
+  primaryText: {
+    fontSize: 19,
+    color: "#6d4c41",
+    fontWeight: "bold",
+  },
+  headerTextBoxContainer: {
+    display: "flex",
+    alignContent: "center",
+    paddingTop: 40,
+  },
+  searchBoxContainer: {
+    backgroundColor: "#fff",
+  },
+  searchBox: {
+    borderColor: "#f5f5f5",
+    backgroundColor: "#f5f5f5",
+    borderWidth: 1,
+    borderRadius: 15,
+    paddingLeft: 10,
+    marginLeft: 15,
+    marginRight: 15,
+  },
+  healthLabelsContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  healthLabel: {
+    fontSize: 10,
+    margin: 10,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 5,
+    paddingRight: 5,
+    backgroundColor: "#ffe0b2",
+    color: "#5d4037",
+    borderRadius: 22,
+  },
+  dietLabel: {
+    fontSize: 10,
+    margin: 10,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 5,
+    paddingRight: 5,
+    backgroundColor: "#c8e6c9",
+    color: "#1b5e20",
+    borderRadius: 22,
+  },
+  cautionLabel: {
+    fontSize: 10,
+    margin: 10,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 5,
+    paddingRight: 5,
+    backgroundColor: "#ffcdd2",
+    color: "#b71c1c",
+    borderRadius: 22,
+  },
+  nutritionDetails: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  nutrientsLabel: {
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: "#eeeeee",
+    padding: 5,
+    paddingLeft: 8,
+    paddingRight: 8,
+    margin: 5,
+    borderRadius: 5,
+  },
+  nutrientLabel: {
+    fontSize: 10,
+    color: "#bdbdbd",
+  },
+  nutrientValue: {
+    fontSize: 15,
+    color: "#616161",
+  },
+});

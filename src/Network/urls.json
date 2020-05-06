@@ -4,9 +4,9 @@
     "base": "/search"
   },
   "nutrition_analysis": {
-    "base": "nutrition-details"
+    "base": "/api/nutrition-details"
   },
   "food_data_base": {
-    "base": "api/food-database/parser"
+    "base": "/api/food-database/parser"
   }
 }
