@@ -52,7 +52,7 @@ export default class HomeScreen extends Component {
             </Text>
             <CustomButton
               onPress={this.gotoMealAnalysis}
-              styles={{ backgroundColor: "#ff8a65" }}
+              styles={{ backgroundColor: "#ff5722" }}
             >
               Analyze Meal
             </CustomButton>

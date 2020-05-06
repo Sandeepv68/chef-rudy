@@ -50,18 +50,18 @@ export const styles = StyleSheet.create({
     paddingTop: 20,
   },
   recepieSearchText: {
-    color: "#6d4c41",
-    fontSize: 15,
+    color: "#757575",
+    fontSize: 14,
     marginBottom: 20,
   },
   nutritionAnalysisText: {
-    color: "#6d4c41",
-    fontSize: 15,
+    color: "#757575",
+    fontSize: 14,
     marginBottom: 20,
   },
   searchContainer: {
     padding: 20,
-    backgroundColor: "#fff3e0",
+    backgroundColor: "#eeeeee",
     margin: 20,
     borderRadius: 15,
   },

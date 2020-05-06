@@ -17,8 +17,6 @@ import { styles } from "./style";
 
 import { getRecipesAction } from "../../Redux/Actions/RecipeSearchActions";
 
-import data from "./data.json";
-
 class RecipeSearch extends Component {
   constructor(props) {
     super(props);
