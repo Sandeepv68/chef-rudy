@@ -10,8 +10,8 @@ import {
   TouchableOpacity,
   RefreshControl,
 } from "react-native";
-import ListPlaceHolder from "../../Components/ListPlaceHolder/ListPlaceHolder";
-import GridPlaceHolder from "../../Components/GridPlaceHolder/GridPlaceHolder";
+import { ListPlaceHolder } from "../../Components/ListPlaceHolder/ListPlaceHolder";
+import { GridPlaceHolder } from "../../Components/GridPlaceHolder/GridPlaceHolder";
 
 import { styles } from "./style";
 

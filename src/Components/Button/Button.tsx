@@ -12,7 +12,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 /**
  * Import Interfaces and stylesheet required for the component
  */
-import { CustomButtonProps } from "./CustomButtonProps";
+import { CustomButtonProps } from "./CustomButtonInterface";
 import { styles } from "./style";
 
 /**
