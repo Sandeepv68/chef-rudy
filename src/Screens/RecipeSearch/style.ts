@@ -73,7 +73,7 @@ export const styles = StyleSheet.create({
     borderRadius: 15,
   },
   resultImageContainer: {
-    backgroundColor: "#fff",
+    backgroundColor: "#f5f5f5",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
