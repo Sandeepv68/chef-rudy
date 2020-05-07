@@ -2,15 +2,12 @@ import React from "react";
 import { View } from "react-native";
 import { Placeholder, PlaceholderMedia, Fade } from "rn-placeholder";
 
+import { GridPlaceHolderProps } from "./GridPlaceHolderProps";
 import { styles } from "./style";
 
-export default function GridPlaceHolder(props) {
-  let Media = () => {
-    return (
-      <PlaceholderMedia
-        style={{ width: 185, height: 160, marginBottom: 10, margin: 10 }}
-      ></PlaceholderMedia>
-    );
+export const GridPlaceHolder: React.SFC<GridPlaceHolderProps> = (props) => {
+  let Media: React.SFC = () => {
+    return <PlaceholderMedia style={styles.placeHolderMedia}></PlaceholderMedia>;
   };
 
   return (
@@ -35,4 +32,4 @@ export default function GridPlaceHolder(props) {
       ></Placeholder>
     </View>
   );
-}
+};
