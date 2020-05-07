@@ -8,7 +8,7 @@ export default function GridPlaceHolder(props) {
   let Media = () => {
     return (
       <PlaceholderMedia
-        style={{ width: 200, height: 160, marginBottom: 10, margin: 10 }}
+        style={{ width: 185, height: 160, marginBottom: 10, margin: 10 }}
       ></PlaceholderMedia>
     );
   };

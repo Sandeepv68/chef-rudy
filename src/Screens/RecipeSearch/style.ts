@@ -143,7 +143,7 @@ export const styles = StyleSheet.create({
     margin: 15,
   },
   gridViewCard: {
-    width: 200,
+    width: 185,
     margin: 12,
     borderRadius: 10,
     backgroundColor: "#fff",
@@ -158,8 +158,8 @@ export const styles = StyleSheet.create({
     flexShrink: 1,
   },
   gridThumbnail: {
-    width: 200,
-    height: 160,
+    width: 185,
+    height: 185,
     resizeMode: "cover",
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
