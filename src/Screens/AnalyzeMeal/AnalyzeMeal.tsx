@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { Text, TextInput, ScrollView, View, Image, TouchableOpacity } from "react-native";
 import { PieChart } from "react-native-svg-charts";
-import ListPlaceHolderGraph from "../../Components/ListPlaceHolderGraph/ListPlaceHolderGraph";
+import { ListPlaceHolderGraph } from "../../Components/ListPlaceHolderGraph/ListPlaceHolderGraph";
 
 import { styles } from "./style";
 
