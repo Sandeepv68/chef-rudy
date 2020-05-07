@@ -1,16 +1,31 @@
+/**
+ * AnalyzeMeal
+ * The screen to do nutritional analysis
+ */
+
+/**
+ * Import React and Redux
+ */
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+/**
+ * Import all the components required
+ */
 import { Text, TextInput, ScrollView, View, Image, TouchableOpacity } from "react-native";
 import { PieChart } from "react-native-svg-charts";
 import { ListPlaceHolderGraph } from "../../Components/ListPlaceHolderGraph/ListPlaceHolderGraph";
 
+/**
+ * Import Interfaces and stylesheet required for the component
+ */
+import { AnalyzeMealProps, AnalyzeMealState } from "./AnalyzeMealInterface";
 import { styles } from "./style";
 
 import { analyzeRecieAction } from "../../Redux/Actions/RecipeAnalyzeAction";
 
-class AnalyzeMeal extends Component {
-  constructor(props) {
+class AnalyzeMeal extends Component<AnalyzeMealProps, AnalyzeMealState> {
+  constructor(props: AnalyzeMealProps) {
     super(props);
     this.state = {
       serving: 1,
@@ -19,16 +34,16 @@ class AnalyzeMeal extends Component {
     };
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps: Object, prevState: Object) {
     if (this.props.recipeData !== prevProps.recipeData) {
-      this.setState({
+      return this.setState({
         nutritionData: this.props.recipeData.data,
       });
     }
   }
 
-  changeServing = (type) => {
-    this.setState({
+  changeServing = (type: string) => {
+    return this.setState({
       serving:
         type == "add"
           ? this.state.serving + 1
@@ -38,13 +53,13 @@ class AnalyzeMeal extends Component {
     });
   };
 
-  getSearchString = (text) => {
-    this.setState({
+  getSearchString = (text: string) => {
+    return this.setState({
       searchString: text,
     });
   };
 
-  analyzeRecipe = () => {
+  analyzeRecipe = (): void => {
     if (this.state.searchString && this.state.searchString.length) {
       return this.props.dispatch(
         analyzeRecieAction(this.state.searchString, this.state.serving)
@@ -94,72 +109,21 @@ class AnalyzeMeal extends Component {
             numberOfLines={4}
             onChangeText={(text) => this.getSearchString(text)}
           />
-          <View style={{ flexDirection: "row", margin: 15 }}>
+          <View style={styles.analyzeControl}>
             <TouchableOpacity onPress={(e) => this.changeServing("add")}>
-              <Text
-                style={{
-                  padding: 5,
-                  paddingRight: 10,
-                  paddingLeft: 10,
-                  backgroundColor: "#e0e0e0",
-                  color: "#757575",
-                  borderRadius: 22,
-                  marginRight: 5,
-                  fontWeight: "bold",
-                }}
-              >
-                +
-              </Text>
+              <Text style={styles.addButton}>+</Text>
             </TouchableOpacity>
-            <Text
-              style={{
-                padding: 5,
-                paddingRight: 10,
-                paddingLeft: 10,
-                backgroundColor: "#e0e0e0",
-                color: "#757575",
-                fontWeight: "bold",
-                borderRadius: 22,
-              }}
-            >
-              {this.state.serving} Servings
-            </Text>
+            <Text style={styles.servingCountText}>{this.state.serving} Servings</Text>
             <TouchableOpacity onPress={(e) => this.changeServing("sub")}>
-              <Text
-                style={{
-                  padding: 5,
-                  paddingRight: 10,
-                  paddingLeft: 10,
-                  backgroundColor: "#e0e0e0",
-                  color: "#757575",
-                  borderRadius: 22,
-                  fontWeight: "bold",
-                  marginLeft: 5,
-                }}
-              >
-                -
-              </Text>
+              <Text style={styles.reduceButton}>-</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={this.analyzeRecipe}>
-              <Text
-                style={{
-                  padding: 5,
-                  paddingRight: 10,
-                  paddingLeft: 10,
-                  backgroundColor: "#ffcc80",
-                  color: "#bf360c",
-                  borderRadius: 22,
-                  marginLeft: 25,
-                  fontWeight: "bold",
-                }}
-              >
-                Analyze
-              </Text>
+              <Text style={styles.analyzeButton}>Analyze</Text>
             </TouchableOpacity>
           </View>
         </View>
 
-        <ScrollView style={{ flex: 1, paddingTop: 20 }}>
+        <ScrollView style={styles.resultScrollView}>
           {this.props.recipeData.loading ? (
             <ListPlaceHolderGraph></ListPlaceHolderGraph>
           ) : null}
@@ -167,105 +131,43 @@ class AnalyzeMeal extends Component {
           {Object.keys(this.state.nutritionData).length &&
           !this.props.recipeData.loading ? (
             <>
-              <View
-                style={{
-                  height: 200,
-                  padding: 15,
-                  marginLeft: 20,
-                  marginRight: 20,
-                  backgroundColor: "#fff",
-                  borderRadius: 15,
-                  flexDirection: "row",
-                  marginBottom: 20,
-                }}
-              >
-                <PieChart style={{ height: 160, width: 160 }} data={pieData} />
+              <View style={styles.nutritionSummary}>
+                <PieChart style={styles.pieChart} data={pieData} />
                 <View>
-                  <View style={{ flexDirection: "row", marginLeft: 20 }}>
-                    <Text style={{ fontSize: 55, textAlignVertical: "bottom" }}>
+                  <View style={styles.detailsView}>
+                    <Text style={styles.pieChartDetailsText}>
                       {this.state.nutritionData.calories} Cal
                     </Text>
                   </View>
-                  <View style={{ flexDirection: "row", marginLeft: 20 }}>
-                    <View
-                      style={{
-                        marginRight: 20,
-                        backgroundColor: "#c5e1a5",
-                        padding: 10,
-                        borderRadius: 5,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 20, color: "#4caf50", textAlign: "center" }}
-                      >
+                  <View style={styles.detailsView}>
+                    <View style={styles.summaryItemView1}>
+                      <Text style={styles.summaryItemQuantity1}>
                         {
                           this.state.nutritionData.totalNutrientsKCal["PROCNT_KCAL"]
                             .quantity
                         }
                       </Text>
-                      <Text
-                        style={{ fontSize: 10, color: "#4caf50", textAlign: "center" }}
-                      >
-                        Protein
-                      </Text>
+                      <Text style={styles.summaryItemLabel1}>Protein</Text>
                     </View>
-                    <View
-                      style={{
-                        marginRight: 20,
-                        backgroundColor: "#ef9a9a",
-                        padding: 10,
-                        paddingLeft: 20,
-                        paddingRight: 20,
-                        borderRadius: 5,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 20, color: "#b71c1c", textAlign: "center" }}
-                      >
+                    <View style={styles.summaryItemView2}>
+                      <Text style={styles.summaryItemQuantity2}>
                         {this.state.nutritionData.totalNutrientsKCal["FAT_KCAL"].quantity}
                       </Text>
-                      <Text
-                        style={{ fontSize: 10, color: "#b71c1c", textAlign: "center" }}
-                      >
-                        Fat
-                      </Text>
+                      <Text style={styles.summaryItemLabel2}>Fat</Text>
                     </View>
-                    <View
-                      style={{
-                        marginRight: 20,
-                        backgroundColor: "#ffcc80",
-                        padding: 10,
-                        borderRadius: 5,
-                      }}
-                    >
-                      <Text
-                        style={{ fontSize: 20, color: "#bf360c", textAlign: "center" }}
-                      >
+                    <View style={styles.summaryItemView3}>
+                      <Text style={styles.summaryItemQuantity3}>
                         {
                           this.state.nutritionData.totalNutrientsKCal["CHOCDF_KCAL"]
                             .quantity
                         }
                       </Text>
-                      <Text
-                        style={{ fontSize: 10, color: "#bf360c", textAlign: "center" }}
-                      >
-                        Carbs
-                      </Text>
+                      <Text style={styles.summaryItemLabel3}>Carbs</Text>
                     </View>
                   </View>
                 </View>
               </View>
-              <View
-                style={{
-                  padding: 15,
-                  marginLeft: 20,
-                  marginRight: 20,
-                  backgroundColor: "#fff",
-                  borderRadius: 15,
-                  flexDirection: "row",
-                  marginBottom: 20,
-                }}
-              >
+              <View style={styles.subSummary}>
                 <View style={styles.healthLabelsContainer}>
                   {this.state.nutritionData.healthLabels.map((healthLabel, key) => {
                     return (
@@ -290,17 +192,7 @@ class AnalyzeMeal extends Component {
                   })}
                 </View>
               </View>
-              <View
-                style={{
-                  padding: 15,
-                  marginLeft: 20,
-                  marginRight: 20,
-                  backgroundColor: "#fff",
-                  borderRadius: 15,
-                  flexDirection: "row",
-                  marginBottom: 40,
-                }}
-              >
+              <View style={styles.subSummary}>
                 <View style={styles.nutritionDetails}>
                   {(() => {
                     return Object.keys(this.state.nutritionData.totalNutrients).map(
@@ -330,7 +222,7 @@ class AnalyzeMeal extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
   recipeData: {
     data: state.analyzeRecipeReducer.data,
     loading: state.analyzeRecipeReducer.loading,
