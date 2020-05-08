@@ -31,6 +31,8 @@ This is my first journey into the world of building mobile apps. I have always b
 <!--te-->
 
 ## Sample Screens
-<img src="https://i.ibb.co/6PdHn3f/chef-rudy-1-splash.png" height=500>
-<img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height=500>
-<img src="https://i.ibb.co/RgMJhwS/chef-rudy-3-search.png" height=500>
+<img src="https://i.ibb.co/6PdHn3f/chef-rudy-1-splash.png" height=500 align="center">
+<i align="center">Splash screen</i>
+
+<img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height=500 align="center">
+<i align="center">Home screen</i>
