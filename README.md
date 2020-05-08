@@ -6,10 +6,10 @@ Chef Rudy
 </h1>
 
 
-A simple mobile app to help in cooking, built using [React Native](). This app can help you search millions of recipes from around the world from its database. This app  can also help you do nutritional analysis on your favourite recipes or its ingredients. 
+A simple mobile app to help in cooking, built using [React Native](https://reactnative.dev/). This app can help you search millions of recipes from around the world from its database. This app  can also help you do nutritional analysis on your favourite recipes or its ingredients. 
 
 ## :slightly_smiling_face: Motivation
-This is my first journey into the world of building mobile apps. I have always been a javascript engineer for the web since the start of my career. I've always loved javascript. Technologies like [NodeJS](), [ReactJS](), and [MarkoJS]() have piqued my interest in JS world. Similarly React Native caught my eye, way back, but I couldn't get my hands-on it. However, I decided to make my time and learn it by building an app for myself. I chose [Edamam]() API to serve as the back-end for this app.
+This is my first journey into the world of building mobile apps. I have always been a javascript engineer for the web since the start of my career. I've always loved javascript. Technologies like [NodeJS](https://nodejs.org/en/), [ExpressJS](https://expressjs.com/), [ReactJS](https://reactjs.org/), and [MarkoJS](https://markojs.com/) have piqued my interest in JS world. Similarly [React Native](https://reactnative.dev/) caught my eye, way back, but I couldn't get my hands-on it. However, I decided to make my time and learn it by building an app for myself. I chose [Edamam](https://www.edamam.com/) API to serve as the back-end for this app. Edamam provides nutrition solutions to businesses in the food, health and wellness sectors, leveraging its proprietary cloud-based, structured-data semantic technology platform. 
 
 ## :notebook_with_decorative_cover: Table of Contents
 
@@ -30,7 +30,8 @@ This is my first journey into the world of building mobile apps. I have always b
 * [Acknowledgements](#acknowledgements)
 <!--te-->
 <p align="center"> </p>
-## Sample Screens
+
+## :iphone: Sample Screens
 <p align="center"><img src="https://i.ibb.co/6PdHn3f/chef-rudy-1-splash.png" height=500>
 </p>
 <p align="center"><i>Splash screen</i> </p>
@@ -40,7 +41,7 @@ This is my first journey into the world of building mobile apps. I have always b
 <p align="center"><i>Home screen</i> </p>
 
 
-## Installation
+## :floppy_disk: Installation
 Clone the repo from the url and install the dependencies
 ```sh
 git clone https://github.com/SandeepVattapparambil/chef-rudy.git
@@ -48,7 +49,7 @@ cd chef-rudy
 npm i && npm install
 ```
 
-## Dependency
+## :package: Dependency
 Chef Rudy app is dependent on the following packages:
 * **@react-native-community/masked-view** [v0.1.10](https://www.npmjs.com/package/@react-native-community/masked-view)
 React Native MaskedView for iOS and Android. React Native MaskedView is not currently supported by Expo unless you "eject".
@@ -62,8 +63,7 @@ Stack navigator for React Navigation.
 * **axios** [v0.19.2](https://www.npmjs.com/package/axios)
 Promise based HTTP client for the browser and node.js
 * **expo** [v37.0.3](https://www.npmjs.com/package/expo)
-The expo package is an umbrella package that contains the client-side code (ex: JavaScript) for accessing system functionality such as contacts, camera, and location in Expo apps.
-Some of the Expo APIs are implemented in this package, while others are implemented in universal modules under the parent packages directory.
+The expo package is an umbrella package that contains the client-side code (ex: JavaScript) for accessing system functionality such as contacts, camera, and location in Expo apps. Some of the Expo APIs are implemented in this package, while others are implemented in universal modules under the parent packages directory.
 
 * **expo-updates** [v0.1.0](https://www.npmjs.com/package/expo-updates)
 expo-updates fetches and manages updates to your app stored on a remote server.
