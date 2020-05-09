@@ -29,13 +29,13 @@ This is my first journey into the world of building mobile apps. I have always b
 
 ## :iphone: Sample Screens
 
-<table class="md-table">
-    <tbody>
-        <tr>
+<table class="md-table" style="border:none">
+    <tbody style="border:none">
+        <tr style="border:none">
             <td style="border:none"><img src="https://i.ibb.co/6PdHn3f/chef-rudy-1-splash.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height="500" /></td>
         </tr>
-        <tr>
+        <tr style="border:none">
             <td style="border:none">
                 <p align="center"><i>Splash screen</i></p>
             </td>
@@ -184,14 +184,14 @@ This feature allows users to search millions of recipes from around the world , 
 This feature allows users to analyze any recipe or uts ingredients to get a complete consolidated nutritional data with charts and graphs.
 
 ### **Recipe Search**
-<table class="md-table">
-    <tbody>
-        <tr>
+<table class="md-table" style="border:none">
+    <tbody style="border:none">
+        <tr style="border:none">
             <td style="border:none"><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/RgMJhwS/chef-rudy-3-search.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/xFJYXXV/chef-rudy-4-search-loading.png" height="500" /></td>
         </tr>
-        <tr>
+        <tr style="border:none">
             <td style="border:none">
                 <p align="center"><i>Home screen</i></p>
             </td>
@@ -202,12 +202,12 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
                 <p align="center"><i>Recipe search loading</i></p>
             </td>
         </tr>
-         <tr>
+         <tr style="border:none">
             <td style="border:none"><img src="https://i.ibb.co/YW6bYhn/chef-rudy-5-list.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/RCBBNBG/chef-rudy-7-grid-loading.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/MR8YrP6/chef-rudy-6-grid.png" height="500" /></td>
         </tr>
-         <tr>
+         <tr style="border:none">
             <td style="border:none">
                 <p align="center"><i>Home screen</i></p>
             </td>
@@ -218,12 +218,12 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
                 <p align="center"><i>Recipe search loading</i></p>
             </td>
         </tr>
-         <tr>
+         <tr style="border:none">
             <td style="border:none"><img src="https://i.ibb.co/8YLT2kS/chef-rudy-8-show-1.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/G9DLqDx/chef-rudy-9-show-2.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/thVx41m/chef-rudy-010-show-3.png" height="500" /></td>
         </tr>
-         <tr>
+         <tr style="border:none">
             <td style="border:none">
                 <p align="center"><i>Home screen</i></p>
             </td>
@@ -234,12 +234,12 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
                 <p align="center"><i>Recipe search loading</i></p>
             </td>
         </tr>
-        <tr>
+        <tr style="border:none">
             <td style="border:none"><img src="https://i.ibb.co/TYT2y6m/chef-rudy-011-show-4.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/RHT4QmF/chef-rudy-012-grid-1.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/djHZ9Wq/chef-rudy-013-show-2.png" height="500" /></td>
         </tr>
-         <tr>
+         <tr style="border:none">
             <td style="border:none">
                 <p align="center"><i>Home screen</i></p>
             </td>
@@ -256,14 +256,14 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
 
 ### **Analyze Meal**
 
-<table class="md-table">
-    <tbody>
-        <tr>
+<table class="md-table" style="border:none">
+    <tbody style="border:none">
+        <tr style="border:none">
             <td style="border:none"><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/tsYpK0F/chef-rudy-014-analysis-1.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/gtd5MTZ/chef-rudy-015-analysis-2.png" height="500" /></td>
         </tr>
-        <tr>
+        <tr style="border:none">
             <td style="border:none">
                 <p align="center"><i>Home screen</i></p>
             </td>
@@ -274,11 +274,11 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
                 <p align="center"><i>Recipe search loading</i></p>
             </td>
         </tr>
-         <tr>
+         <tr style="border:none">
             <td style="border:none"><img src="https://i.ibb.co/7CRQ297/chef-rudy-016-analysis-3.png" height="500" /></td>
             <td style="border:none"><img src="https://i.ibb.co/Hd7VLyb/chef-rudy-017-analysis-4.png" height="500" /></td>
         </tr>
-        <tr>
+        <tr style="border:none">
             <td style="border:none">
                 <p align="center"><i>Home screen</i></p>
             </td>
