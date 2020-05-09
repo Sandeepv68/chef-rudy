@@ -16,7 +16,7 @@ This is my first journey into the world of building mobile apps. I have always b
 * [Installation](#installation)
 * [Dependency](#dependency)
 * [Backend API Server](#backend-api)
-* [Development](#development)
+* [Design & Architecture](#design-&-srchitecture)
 * [App Features](#app-features)
 * [Future Scope](#future-scope)
 * [Testing](#testing)
@@ -28,14 +28,31 @@ This is my first journey into the world of building mobile apps. I have always b
 <p align="center"> </p>
 
 ## :iphone: Sample Screens
-<p align="center"><img src="https://i.ibb.co/6PdHn3f/chef-rudy-1-splash.png" height=500>
-</p>
-<p align="center"><i>Splash screen</i> </p>
 
-
-<p align="center"><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height=500> </p>
-<p align="center"><i>Home screen</i> </p>
-
+<style>
+.md-table{
+    border: none;
+}
+.md-table tbody tr, .md-table tbody tr td {
+    border: none
+}
+</style>
+<table class="md-table">
+    <tbody>
+        <tr>
+            <td><img src="https://i.ibb.co/6PdHn3f/chef-rudy-1-splash.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height="500" /></td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center"><i>Splash screen</i></p>
+            </td>
+            <td>
+                <p align="center"><i>Home screen</i></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## :floppy_disk: Installation
 Clone the repo from the url and install the dependencies
@@ -139,8 +156,8 @@ TypeScript is a language for application-scale JavaScript. TypeScript adds optio
 This project uses [Edamam](https://www.edamam.com/) API to serve as the back-end for this app. Edamam provides nutrition solutions to businesses in the food, health and wellness sectors, leveraging its proprietary cloud-based, structured-data semantic technology platform. Inorder to consume the api, users are instructed to signup from their web portal available [here](https://developer.edamam.com/). Edamam has various subscription plans available for all types of users. Each api requires discrete app id and app key. These keys has to be saved inside the `keys.json` file inside the `src` folder in the app repo as shown in the image below.
 <p><img src="https://i.ibb.co/PgRs4Nd/keys.png" height=400></p>
 
-## Development
-Once the git repo is cloned, and api keys are set, you are good to go. You can modify the code to best suit your needs. The following is the folder tree structure for the `src`folder. The source of the app is written in `Typescript`.
+## Design & Architecture
+Once the git repo is cloned, and api keys are set, you are good to go. You can modify the code to best suit your needs. The following is the folder tree structure for the `src` folder. The source of the app is written in `Typescript`.
 ```sh
 └───src
     ├───Components
@@ -174,4 +191,108 @@ This feature allows users to search millions of recipes from around the world , 
 * **Analyze Meal**
 This feature allows users to analyze any recipe or uts ingredients to get a complete consolidated nutritional data with charts and graphs.
 
-<p align="center"><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height=500></p>
+### **Recipe Search**
+<table class="md-table">
+    <tbody>
+        <tr>
+            <td><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/RgMJhwS/chef-rudy-3-search.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/xFJYXXV/chef-rudy-4-search-loading.png" height="500" /></td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center"><i>Home screen</i></p>
+            </td>
+            <td>
+                <p align="center"><i>Recipe search screen</i></p>
+            </td>
+             <td>
+                <p align="center"><i>Recipe search loading</i></p>
+            </td>
+        </tr>
+         <tr>
+            <td><img src="https://i.ibb.co/YW6bYhn/chef-rudy-5-list.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/RCBBNBG/chef-rudy-7-grid-loading.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/MR8YrP6/chef-rudy-6-grid.png" height="500" /></td>
+        </tr>
+         <tr>
+            <td>
+                <p align="center"><i>Home screen</i></p>
+            </td>
+            <td>
+                <p align="center"><i>Recipe search screen</i></p>
+            </td>
+             <td>
+                <p align="center"><i>Recipe search loading</i></p>
+            </td>
+        </tr>
+         <tr>
+            <td><img src="https://i.ibb.co/8YLT2kS/chef-rudy-8-show-1.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/G9DLqDx/chef-rudy-9-show-2.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/thVx41m/chef-rudy-010-show-3.png" height="500" /></td>
+        </tr>
+         <tr>
+            <td>
+                <p align="center"><i>Home screen</i></p>
+            </td>
+            <td>
+                <p align="center"><i>Recipe search screen</i></p>
+            </td>
+             <td>
+                <p align="center"><i>Recipe search loading</i></p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="https://i.ibb.co/TYT2y6m/chef-rudy-011-show-4.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/RHT4QmF/chef-rudy-012-grid-1.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/djHZ9Wq/chef-rudy-013-show-2.png" height="500" /></td>
+        </tr>
+         <tr>
+            <td>
+                <p align="center"><i>Home screen</i></p>
+            </td>
+            <td>
+                <p align="center"><i>Recipe search screen</i></p>
+            </td>
+             <td>
+                <p align="center"><i>Recipe search loading</i></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+### **Analyze Meal**
+
+<table class="md-table">
+    <tbody>
+        <tr>
+            <td><img src="https://i.ibb.co/SPTL6GL/chef-rudy-2-home.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/tsYpK0F/chef-rudy-014-analysis-1.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/gtd5MTZ/chef-rudy-015-analysis-2.png" height="500" /></td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center"><i>Home screen</i></p>
+            </td>
+            <td>
+                <p align="center"><i>Recipe search screen</i></p>
+            </td>
+             <td>
+                <p align="center"><i>Recipe search loading</i></p>
+            </td>
+        </tr>
+         <tr>
+            <td><img src="https://i.ibb.co/7CRQ297/chef-rudy-016-analysis-3.png" height="500" /></td>
+            <td><img src="https://i.ibb.co/Hd7VLyb/chef-rudy-017-analysis-4.png" height="500" /></td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center"><i>Home screen</i></p>
+            </td>
+            <td>
+                <p align="center"><i>Recipe search screen</i></p>
+            </td>
+        </tr>
+    </tbody>
+<table>    
