@@ -181,22 +181,22 @@ Manually start the packager using the following command:
 npm run start
 ```
 
-Start and run your app in an Android device / AVD
+Start and run your app in an Android device / AVD:
 ```sh
 npm run android
 ```
 
-Start and run your app in an iOS device / emulator
+Start and run your app in an iOS device / emulator:
 ```sh
 npm run ios
 ```
 
-Run your app on web
+Run your app on web:
 ```sh
 npm run web
 ```
 
-Package and run your app on an Android/iOS device using Expo client on your device
+Package and run your app on an Android/iOS device using Expo client on your device:
 ```sh
 npm run mobile
 ```
@@ -329,16 +329,19 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
 ## :rocket: Future Scope
 <p align="center"><img src="https://i.ibb.co/82PyKFw/Annotation-2020-05-09-152608.png" height="500"></p>
 
-Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter](https://flutter.dev/) a similar framework from [Google](https://flutter.dev/) is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore]() architecture. 
+Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter](https://flutter.dev/) a similar framework from [Google](https://flutter.dev/) is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore](https://medium.com/kuralabs-engineering/reactive-core-architecture-for-react-native-and-react-applications-d590daf4ef8a) architecture. 
 The proposed architecture is composed by three modules:
 
 **The core**: 
+
 Includes the business logic and the state of the application. This component is implemented using the Redux framework. Code reuse is done via this module. This is the most important module to make the Reactive Core Architecture possible. It’s the only one able to handle and mutate the application state. It’s the brain that tells the mobile and web applications how to behave and react. It's also the clear candidate to consume a REST API and process data. Since each reducer handles an specific part of the application state, it makes easier for the core module to scale for larger and more complex applications.
 
 **The mobile app**:
+
  Implemented as a standard React Native application, using containers and components.
 
 **The web application**: 
+
 Implemented as a standard React application, using containers and components.
 Each module will live in its own repository, with the core as a git submodule in both applications.
 
@@ -386,4 +389,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## :handshake: Acknowledgements
+:vulcan_salute: [Carolina Aguilar](https://medium.com/@caroagse?source=post_page-----d590daf4ef8a----------------------) for your medium article.
+:vulcan_salute: [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/) for your amazing courses on Udemy, from which I learned react native.
+
 Made with ❤️ by Sandeep Vattapparambil.
