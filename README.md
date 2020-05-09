@@ -294,10 +294,13 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
 
 Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter]() a similar framework from [Google]() is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore]() architecture. 
 The proposed architecture is composed by three modules:
+
 **The core**: 
 Includes the business logic and the state of the application. This component is implemented using the Redux framework. Code reuse is done via this module. This is the most important module to make the Reactive Core Architecture possible. It’s the only one able to handle and mutate the application state. It’s the brain that tells the mobile and web applications how to behave and react. It's also the clear candidate to consume a REST API and process data. Since each reducer handles an specific part of the application state, it makes easier for the core module to scale for larger and more complex applications.
+
 **The mobile app**:
  Implemented as a standard React Native application, using containers and components.
+ 
 **The web application**: 
 Implemented as a standard React application, using containers and components.
 Each module will live in its own repository, with the core as a git submodule in both applications.
