@@ -389,7 +389,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## :handshake: Acknowledgements
-:vulcan_salute: [Carolina Aguilar](https://medium.com/@caroagse?source=post_page-----d590daf4ef8a----------------------) for your medium article.
+:vulcan_salute: [Edamam](https://www.edamam.com/) for your apis.
 :vulcan_salute: [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/) for your amazing courses on Udemy, from which I learned react native.
+:vulcan_salute: [Carolina Aguilar](https://medium.com/@caroagse?source=post_page-----d590daf4ef8a----------------------) for your medium article on ReactiveCore architecture.
 
 Made with ❤️ by Sandeep Vattapparambil.
