@@ -17,7 +17,7 @@ This project is to showcase what I learned from building apps in react native, a
 * [Dependency](#package-dependency)
 * [Backend API Server](#control_knobs-backend-api-server)
 * [Design & Architecture](#framed_picture-design--architecture)
-    * [Available commands](oudspeaker-available-commands)
+    * [Available commands](#loudspeaker-available-commands)
 * [App Features](#point_right-app-features)
     * [Recipe Search](#point_right-app-features)
     * [Analyze Meal](#1-analyze-meal)
