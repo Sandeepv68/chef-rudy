@@ -16,7 +16,7 @@ This is my first journey into the world of building mobile apps. I have always b
 * [Dependency](#package-dependency)
 * [Backend API Server](#control_knobs-backend-api-server)
 * [Design & Architecture](#framed_picture-design--architecture)
-    * [Available commands]()
+    * [Available commands](oudspeaker-available-commands)
 * [App Features](#point_right-app-features)
     * [Recipe Search](#point_right-app-features)
     * [Analyze Meal](#1-analyze-meal)
