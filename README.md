@@ -199,7 +199,7 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
                 <p align="center"><i>Recipe search screen</i></p>
             </td>
              <td style="border:none">
-                <p align="center"><i>Recipe search loading</i></p>
+                <p align="center"><i>Recipe search loading for list view</i></p>
             </td>
         </tr>
          <tr style="border:none">
@@ -209,13 +209,13 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
         </tr>
          <tr style="border:none">
             <td style="border:none">
-                <p align="center"><i>Home screen</i></p>
+                <p align="center"><i>Recipes in list view</i></p>
             </td>
             <td style="border:none">
-                <p align="center"><i>Recipe search screen</i></p>
+                <p align="center"><i>Recipe search loading for grid view</i></p>
             </td>
              <td style="border:none">
-                <p align="center"><i>Recipe search loading</i></p>
+                <p align="center"><i>Recipes in grid view</i></p>
             </td>
         </tr>
          <tr style="border:none">
@@ -225,13 +225,13 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
         </tr>
          <tr style="border:none">
             <td style="border:none">
-                <p align="center"><i>Home screen</i></p>
+                <p align="center"><i>Recipe show screen, <br/>default selected Ingredients tab</i></p>
             </td>
             <td style="border:none">
-                <p align="center"><i>Recipe search screen</i></p>
+                <p align="center"><i>Recipe show screen, <br/>Preparation tab selected. <br/>Go to redipe button visible</i></p>
             </td>
              <td style="border:none">
-                <p align="center"><i>Recipe search loading</i></p>
+                <p align="center">Recipe show screen, <br/>Nutrition tab selected.</i></p>
             </td>
         </tr>
         <tr style="border:none">
@@ -241,13 +241,13 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
         </tr>
          <tr style="border:none">
             <td style="border:none">
-                <p align="center"><i>Home screen</i></p>
+                <p align="center"><i>Recipe show screen</i></p>
             </td>
             <td style="border:none">
-                <p align="center"><i>Recipe search screen</i></p>
+                <p align="center"><i>Recipes in grid view</i></p>
             </td>
              <td style="border:none">
-                <p align="center"><i>Recipe search loading</i></p>
+                <p align="center"><i>Recipe show screen</i></p>
             </td>
         </tr>
     </tbody>
@@ -268,10 +268,10 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
                 <p align="center"><i>Home screen</i></p>
             </td>
             <td style="border:none">
-                <p align="center"><i>Recipe search screen</i></p>
+                <p align="center"><i>Analyze Meal screen</i></p>
             </td>
              <td style="border:none">
-                <p align="center"><i>Recipe search loading</i></p>
+                <p align="center"><i>Nutrition data loading</i></p>
             </td>
         </tr>
          <tr style="border:none">
@@ -280,10 +280,10 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
         </tr>
         <tr style="border:none">
             <td style="border:none">
-                <p align="center"><i>Home screen</i></p>
+                <p align="center"><i>Nutrition data summary</i></p>
             </td>
             <td style="border:none">
-                <p align="center"><i>Recipe search screen</i></p>
+                <p align="center"><i>Nutrition data summary (more)</i></p>
             </td>
         </tr>
     </tbody>
