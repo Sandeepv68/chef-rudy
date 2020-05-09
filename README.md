@@ -10,20 +10,23 @@ This is my first journey into the world of building mobile apps. I have always b
 ## :notebook_with_decorative_cover: Table of Contents
 
 <!--ts-->
-* [About](#chef-rudy)
-* [Motivation](#motivation)
-* [Sample Screens](#sample-screens)
-* [Installation](#installation)
-* [Dependency](#dependency)
-* [Backend API Server](#backend-api)
-* [Design & Architecture](#design-&-srchitecture)
-* [App Features](#app-features)
-* [Future Scope](#future-scope)
-* [Testing](#testing)
-* [Technologies Used](#technologies-used)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgements](#acknowledgements)
+* [Motivation](#slightly_smiling_face-motivation)
+* [Sample Screens](#iphone-sample-screens)
+* [Installation](#floppy_disk-installation)
+* [Dependency](#package-dependency)
+* [Backend API Server](#control_knobs-backend-api-server)
+* [Design & Architecture](#framed_picture-design--architecture)
+    * [Available commands]()
+* [App Features](#point_right-app-features)
+    * [Recipe Search](#point_right-app-features)
+    * [Analyze Meal](#1-analyze-meal)
+* [Future Scope](#rocket-future-scope)
+* [Testing](#hammer_and_wrench-testing)
+* [Technologies Used](#gear-technologies-used)
+* [Contributing](#hammer-contributing)
+* [Authors](#man_technologist-authors)
+* [License](#scroll-license)
+* [Acknowledgements](#handshake-acknowledgements)
 <!--te-->
 <p align="center"> </p>
 
@@ -170,7 +173,40 @@ Once the git repo is cloned, and api keys are set, you are good to go. You can m
         ├───RecipeSearch
         └───ShowRecipe
 ```
+
+### :loudspeaker: Available commands
+Manually start the packager using the following command:
+```sh
+npm run start
+```
+
+Start and run your app in an Android device / AVD
+```sh
+npm run android
+```
+
+Start and run your app in an iOS device / emulator
+```sh
+npm run ios
+```
+
+Run your app on web
+```sh
+npm run web
+```
+
+Package and run your app on an Android/iOS device using Expo client on your device
+```sh
+npm run mobile
+```
+
+
 The main entry point to the app is `index.js`, which registers the root component `App` from `App.tsx`. App loads all the screens and sets up the navigation using stack. Data required for each screen is obtained from `redux` store, which gets it from the api using `thunk` and `axios`. The architecture of this app follows standard redux-flux architecture as shown below: 
+
+<p align="center">
+<img src="https://i.ibb.co/Cm6SpyZ/Untitled.png"></p>
+
+The redux architecture implemented here is a reduced model of [flux architecture](https://facebook.github.io/flux/docs/in-depth-overview) as shown below:
 <p align="center">
 <img src="https://cdn.scotch.io/scotchy-uploads/2014/10/V70cSEC.png"></p>
 
@@ -292,7 +328,7 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
 ## :rocket: Future Scope
 <p align="center"><img src="https://i.ibb.co/82PyKFw/Annotation-2020-05-09-152608.png" height="500"></p>
 
-Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter]() a similar framework from [Google]() is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore]() architecture. 
+Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter](https://flutter.dev/) a similar framework from [Google](https://flutter.dev/) is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore]() architecture. 
 The proposed architecture is composed by three modules:
 
 **The core**: 
