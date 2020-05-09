@@ -283,8 +283,66 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
                 <p align="center"><i>Nutrition data summary</i></p>
             </td>
             <td style="border:none">
-                <p align="center"><i>Nutrition data summary (more)</i></p>
+                <p align="center"><i>Nutrition data summary (scrolled)</i></p>
             </td>
         </tr>
     </tbody>
 <table>    
+
+## Future Scope
+<p align="center"><img src="https://i.ibb.co/82PyKFw/Annotation-2020-05-09-152608.png" height="500"></p>
+
+Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter]() a similar framework from [Google]() is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore]() architecture. 
+The proposed architecture is composed by three modules:
+**The core**: 
+Includes the business logic and the state of the application. This component is implemented using the Redux framework. Code reuse is done via this module. This is the most important module to make the Reactive Core Architecture possible. It’s the only one able to handle and mutate the application state. It’s the brain that tells the mobile and web applications how to behave and react. It's also the clear candidate to consume a REST API and process data. Since each reducer handles an specific part of the application state, it makes easier for the core module to scale for larger and more complex applications.
+**The mobile app**:
+ Implemented as a standard React Native application, using containers and components.
+**The web application**: 
+Implemented as a standard React application, using containers and components.
+Each module will live in its own repository, with the core as a git submodule in both applications.
+
+Let’s take a look to the architecture diagram:
+<p align="center"><img src="https://miro.medium.com/max/1400/1*jMpdj2y5rayiwlQ8YNTs5A.jpeg" height=500></p>
+
+You can read more about ReactiveCore Architecture from this medium article by [Carolina Aguilar](https://medium.com/@caroagse?source=post_page-----d590daf4ef8a----------------------) from [here](https://medium.com/kuralabs-engineering/reactive-core-architecture-for-react-native-and-react-applications-d590daf4ef8a)
+
+other resources:
+* [Flutter vs React Native](https://nevercode.io/blog/flutter-vs-react-native-a-developers-perspective/)
+
+## Testing
+Unit testing can be implemented using [Jest](https://www.npmjs.com/package/jest) testing library. 
+
+## Technologies Used
+
+## Contributing
+Please read [CONTRIBUTING.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CONTRIBUTING.md) for details on contributing to the project and [CODE_OF_CONDUCT.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CODE_OF_CONDUCT.md) for the process for submitting pull requests to us.
+
+## Authors
+* [Sandeep Vattapparambil](https://github.com/SandeepVattapparambil)
+
+## License
+MIT License
+
+Copyright (c) 2020 Sandeep Vattapparambil
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Acknowledgements
+Made with ❤️ by Sandeep Vattapparambil.
