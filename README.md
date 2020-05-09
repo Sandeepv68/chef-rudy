@@ -144,11 +144,11 @@ This preset extends the default React Native preset (metro-react-native-babel-pr
 * **typescript** [v3.8.3](https://www.npmjs.com/package/typescript) **:**
 TypeScript is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript.
 
-## Backend API Server
+## :control_knobs: Backend API Server
 This project uses [Edamam](https://www.edamam.com/) API to serve as the back-end for this app. Edamam provides nutrition solutions to businesses in the food, health and wellness sectors, leveraging its proprietary cloud-based, structured-data semantic technology platform. Inorder to consume the api, users are instructed to signup from their web portal available [here](https://developer.edamam.com/). Edamam has various subscription plans available for all types of users. Each api requires discrete app id and app key. These keys has to be saved inside the `keys.json` file inside the `src` folder in the app repo as shown in the image below.
 <p><img src="https://i.ibb.co/PgRs4Nd/keys.png" height=400></p>
 
-## Design & Architecture
+## :framed_picture: Design & Architecture
 Once the git repo is cloned, and api keys are set, you are good to go. You can modify the code to best suit your needs. The following is the folder tree structure for the `src` folder. The source of the app is written in `Typescript`.
 ```sh
 └───src
@@ -174,7 +174,7 @@ The main entry point to the app is `index.js`, which registers the root componen
 <p align="center">
 <img src="https://cdn.scotch.io/scotchy-uploads/2014/10/V70cSEC.png"></p>
 
-## App Features
+## :point_right: App Features
 Once the app loads, it renders the home screen as shown below:
 
 Users have two options to choose from:
@@ -183,7 +183,7 @@ This feature allows users to search millions of recipes from around the world , 
 * **Analyze Meal**
 This feature allows users to analyze any recipe or uts ingredients to get a complete consolidated nutritional data with charts and graphs.
 
-### **Recipe Search**
+### :+1: **Recipe Search**
 <table class="md-table" style="border:none">
     <tbody style="border:none">
         <tr style="border:none">
@@ -254,7 +254,7 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
 </table>
 
 
-### **Analyze Meal**
+### :+1: **Analyze Meal**
 
 <table class="md-table" style="border:none">
     <tbody style="border:none">
@@ -289,7 +289,7 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
     </tbody>
 <table>    
 
-## Future Scope
+## :rocket: Future Scope
 <p align="center"><img src="https://i.ibb.co/82PyKFw/Annotation-2020-05-09-152608.png" height="500"></p>
 
 Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter]() a similar framework from [Google]() is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore]() architecture. 
@@ -313,19 +313,19 @@ You can read more about ReactiveCore Architecture from this medium article by [C
 other resources:
 * [Flutter vs React Native](https://nevercode.io/blog/flutter-vs-react-native-a-developers-perspective/)
 
-## Testing
+## :hammer_and_wrench: Testing
 Unit testing can be implemented using [Jest](https://www.npmjs.com/package/jest) testing library. 
 
-## Technologies Used
+## :gear: Technologies Used
 <img src="https://i.ibb.co/dMpJ8Dn/tech-stack.png">
 
-## Contributing
+## :hammer: Contributing
 Please read [CONTRIBUTING.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CONTRIBUTING.md) for details on contributing to the project and [CODE_OF_CONDUCT.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CODE_OF_CONDUCT.md) for the process for submitting pull requests to us.
 
-## Authors
+## :man_technologist: Authors
 * [Sandeep Vattapparambil](https://github.com/SandeepVattapparambil)
 
-## License
+## :scroll: License
 MIT License
 
 Copyright (c) 2020 Sandeep Vattapparambil
@@ -348,5 +348,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Acknowledgements
+## :handshake: Acknowledgements
 Made with ❤️ by Sandeep Vattapparambil.
