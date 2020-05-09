@@ -300,7 +300,7 @@ Includes the business logic and the state of the application. This component is 
 
 **The mobile app**:
  Implemented as a standard React Native application, using containers and components.
- 
+
 **The web application**: 
 Implemented as a standard React application, using containers and components.
 Each module will live in its own repository, with the core as a git submodule in both applications.
@@ -317,6 +317,7 @@ other resources:
 Unit testing can be implemented using [Jest](https://www.npmjs.com/package/jest) testing library. 
 
 ## Technologies Used
+<img src="https://i.ibb.co/dMpJ8Dn/tech-stack.png">
 
 ## Contributing
 Please read [CONTRIBUTING.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CONTRIBUTING.md) for details on contributing to the project and [CODE_OF_CONDUCT.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CODE_OF_CONDUCT.md) for the process for submitting pull requests to us.
