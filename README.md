@@ -352,7 +352,6 @@ You can read more about ReactiveCore Architecture from this medium article by [C
 
 other resources:
 * [Flutter vs React Native](https://nevercode.io/blog/flutter-vs-react-native-a-developers-perspective/)
-* [Should I use React Native ?](https://medium.com/articode/should-i-use-react-native-edc98303f723)
 
 ## :hammer_and_wrench: Testing
 Unit testing can be implemented using [Jest](https://www.npmjs.com/package/jest) testing library. 
