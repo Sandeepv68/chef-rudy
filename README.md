@@ -13,6 +13,7 @@ This project is to showcase what I learned from building apps in react native, a
 <!--ts-->
 * [Motivation](#slightly_smiling_face-motivation)
 * [Sample Screens](#iphone-sample-screens)
+* [App Demo](#film_strip-app-demo)
 * [Installation](#floppy_disk-installation)
 * [Dependency](#package-dependency)
 * [Backend API Server](#control_knobs-backend-api-server)
@@ -49,6 +50,9 @@ This project is to showcase what I learned from building apps in react native, a
         </tr>
     </tbody>
 </table>
+
+## :film_strip:	App Demo
+[Watch the video on youtube](https://youtu.be/2hji8MQfCJc)
 
 ## :floppy_disk: Installation
 Clone the repo from the url and install the dependencies
