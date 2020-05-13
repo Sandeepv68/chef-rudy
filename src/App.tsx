@@ -18,6 +18,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 
 /**
+ * Import HOCs
+ */
+import withNetInfo from "./HOCs/withNetInfo/withNetInfo";
+
+/**
  * Import all the screens
  */
 import HomeScreen from "./Screens/Home/HomeScreen";
@@ -62,4 +67,4 @@ const ChefRudy: React.SFC = () => (
   </Provider>
 );
 
-export default ChefRudy;
+export default withNetInfo(ChefRudy);
