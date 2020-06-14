@@ -366,7 +366,7 @@ Unit testing can be implemented using [Jest](https://www.npmjs.com/package/jest)
 ## :hammer: &nbsp; Contributing
 Please read [CONTRIBUTING.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CONTRIBUTING.md) for details on contributing to the project and [CODE_OF_CONDUCT.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CODE_OF_CONDUCT.md) for the process for submitting pull requests to us.
 
-## :man_technologist: Authors
+## :man_technologist: &nbsp; Authors
 * [Sandeep Vattapparambil](https://github.com/SandeepVattapparambil)
 
 ## :scroll: &nbsp; License
