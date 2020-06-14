@@ -8,7 +8,7 @@ A simple mobile app to help in cooking, built using [React Native](https://react
 This is my first journey into the world of building mobile apps. I have always been a javascript engineer for the web since the start of my career. I've always loved javascript. Technologies like [NodeJS](https://nodejs.org/en/), [ExpressJS](https://expressjs.com/), [ReactJS](https://reactjs.org/), and [MarkoJS](https://markojs.com/) have piqued my interest in JS world. Similarly [React Native](https://reactnative.dev/) caught my eye, way back, but I couldn't get my hands-on it. However, I decided to make my time and learn it by building an app for myself. I chose [Edamam](https://www.edamam.com/) API to serve as the back-end for this app. Edamam provides nutrition solutions to businesses in the food, health and wellness sectors, leveraging its proprietary cloud-based, structured-data semantic technology platform. 
 This project is to showcase what I learned from building apps in react native, and also as a sample for others who wants to learn mobile app development in react native.
 
-## :notebook_with_decorative_cover: Table of Contents
+## :notebook_with_decorative_cover: &nbsp; Table of Contents
 
 <!--ts-->
 * [Motivation](#slightly_smiling_face-motivation)
@@ -32,7 +32,7 @@ This project is to showcase what I learned from building apps in react native, a
 <!--te-->
 <p align="center"> </p>
 
-## :iphone: Sample Screens
+## :iphone: &nbsp; Sample Screens
 
 <table class="md-table" style="border:none">
     <tbody style="border:none">
@@ -51,10 +51,10 @@ This project is to showcase what I learned from building apps in react native, a
     </tbody>
 </table>
 
-## :film_strip:	App Demo
+## :film_strip: &nbsp; App Demo
 [Watch the video on youtube](https://youtu.be/2hji8MQfCJc)
 
-## :floppy_disk: Installation
+## :floppy_disk: &nbsp; Installation
 Clone the repo from the url and install the dependencies
 ```sh
 git clone https://github.com/SandeepVattapparambil/chef-rudy.git
@@ -62,7 +62,7 @@ cd chef-rudy
 npm i && npm install
 ```
 
-## :package: Dependency
+## :package: &nbsp; Dependency
 Chef Rudy app is dependent on the following packages:
 * **@react-native-community/masked-view** [v0.1.10](https://www.npmjs.com/package/@react-native-community/masked-view) **:**
 React Native MaskedView for iOS and Android. React Native MaskedView is not currently supported by Expo unless you "eject".
@@ -152,11 +152,11 @@ This preset extends the default React Native preset (metro-react-native-babel-pr
 * **typescript** [v3.8.3](https://www.npmjs.com/package/typescript) **:**
 TypeScript is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript.
 
-## :control_knobs: Backend API Server
+## :control_knobs: &nbsp; Backend API Server
 This project uses [Edamam](https://www.edamam.com/) API to serve as the back-end for this app. Edamam provides nutrition solutions to businesses in the food, health and wellness sectors, leveraging its proprietary cloud-based, structured-data semantic technology platform. Inorder to consume the api, users are instructed to signup from their web portal available [here](https://developer.edamam.com/). Edamam has various subscription plans available for all types of users. Each api requires discrete app id and app key. These keys has to be saved inside the `keys.json` file inside the `src` folder in the app repo as shown in the image below.
 <p><img src="https://i.ibb.co/PgRs4Nd/keys.png" height=400></p>
 
-## :framed_picture: Design & Architecture
+## :framed_picture: &nbsp; Design & Architecture
 Once the git repo is cloned, and api keys are set, you are good to go. You can modify the code to best suit your needs. The following is the folder tree structure for the `src` folder. The source of the app is written in `Typescript`.
 ```sh
 └───src
@@ -179,7 +179,7 @@ Once the git repo is cloned, and api keys are set, you are good to go. You can m
         └───ShowRecipe
 ```
 
-### :loudspeaker: Available commands
+### :loudspeaker: &nbsp; Available commands
 Manually start the packager using the following command:
 ```sh
 npm run start
@@ -215,7 +215,7 @@ The redux architecture implemented here is a reduced model of [flux architecture
 <p align="center">
 <img src="https://cdn.scotch.io/scotchy-uploads/2014/10/V70cSEC.png"></p>
 
-## :point_right: App Features
+## :point_right: &nbsp; App Features
 Once the app loads, it renders the home screen as shown below:
 
 Users have two options to choose from:
@@ -224,7 +224,7 @@ This feature allows users to search millions of recipes from around the world , 
 * **Analyze Meal**
 This feature allows users to analyze any recipe or uts ingredients to get a complete consolidated nutritional data with charts and graphs.
 
-### :+1: **Recipe Search**
+### :+1: &nbsp; **Recipe Search**
 <table class="md-table" style="border:none">
     <tbody style="border:none">
         <tr style="border:none">
@@ -295,7 +295,7 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
 </table>
 
 
-### :+1: **Analyze Meal**
+### :+1: &nbsp; **Analyze Meal**
 
 <table class="md-table" style="border:none">
     <tbody style="border:none">
@@ -330,7 +330,7 @@ This feature allows users to analyze any recipe or uts ingredients to get a comp
     </tbody>
 <table>    
 
-## :rocket: Future Scope
+## :rocket: &nbsp; Future Scope
 <p align="center"><img src="https://i.ibb.co/82PyKFw/Annotation-2020-05-09-152608.png" height="500"></p>
 
 Over the past five years, the trend in adopting moble technologies shows, that industry profoundly prefers React Native over any other framework in the market. However, [Flutter](https://flutter.dev/) a similar framework from [Google](https://flutter.dev/) is also catching up. The high popularity of react native accounts from the reusability and extensibility of Javascript for both web and mobile. Business logic written in javascript can be modularised and reused accross mobile as well as web apps. However a strong architectural foundation has to be set up inorder to achieve that. One such standard architecture is called [ReactiveCore](https://medium.com/kuralabs-engineering/reactive-core-architecture-for-react-native-and-react-applications-d590daf4ef8a) architecture. 
@@ -357,19 +357,19 @@ You can read more about ReactiveCore Architecture from this medium article by [C
 other resources:
 * [Flutter vs React Native](https://nevercode.io/blog/flutter-vs-react-native-a-developers-perspective/)
 
-## :hammer_and_wrench: Testing
+## :hammer_and_wrench: &nbsp; Testing
 Unit testing can be implemented using [Jest](https://www.npmjs.com/package/jest) testing library. 
 
-## :gear: Technologies Used
+## :gear: &nbsp; Technologies Used
 <img src="https://i.ibb.co/dMpJ8Dn/tech-stack.png">
 
-## :hammer: Contributing
+## :hammer: &nbsp; Contributing
 Please read [CONTRIBUTING.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CONTRIBUTING.md) for details on contributing to the project and [CODE_OF_CONDUCT.md](https://github.com/SandeepVattapparambil/chef-rudy/blob/master/CODE_OF_CONDUCT.md) for the process for submitting pull requests to us.
 
 ## :man_technologist: Authors
 * [Sandeep Vattapparambil](https://github.com/SandeepVattapparambil)
 
-## :scroll: License
+## :scroll: &nbsp; License
 MIT License
 
 Copyright (c) 2020 Sandeep Vattapparambil
@@ -392,11 +392,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## :handshake: Acknowledgements
-:vulcan_salute: [Edamam](https://www.edamam.com/) for your apis.
+## :handshake: &nbsp; Acknowledgements
+:vulcan_salute: &nbsp; [Edamam](https://www.edamam.com/) for your apis.
 
-:vulcan_salute: [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/) for your amazing courses on Udemy, from which I learned react native.
+:vulcan_salute: &nbsp; [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/) for your amazing courses on Udemy, from which I learned react native.
 
-:vulcan_salute: [Carolina Aguilar](https://medium.com/@caroagse?source=post_page-----d590daf4ef8a----------------------) for your medium article on ReactiveCore architecture.
+:vulcan_salute: &nbsp; [Carolina Aguilar](https://medium.com/@caroagse?source=post_page-----d590daf4ef8a----------------------) for your medium article on ReactiveCore architecture.
 
 Made with ❤️ by Sandeep Vattapparambil.
