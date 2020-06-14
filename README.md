@@ -4,7 +4,7 @@
 
 A simple mobile app to help in cooking, built using [React Native](https://reactnative.dev/). This app can help you search millions of recipes from around the world from its database. This app  can also help you do nutritional analysis on your favourite recipes or its ingredients. 
 
-## :slightly_smiling_face: Motivation
+## :slightly_smiling_face:  Motivation
 This is my first journey into the world of building mobile apps. I have always been a javascript engineer for the web since the start of my career. I've always loved javascript. Technologies like [NodeJS](https://nodejs.org/en/), [ExpressJS](https://expressjs.com/), [ReactJS](https://reactjs.org/), and [MarkoJS](https://markojs.com/) have piqued my interest in JS world. Similarly [React Native](https://reactnative.dev/) caught my eye, way back, but I couldn't get my hands-on it. However, I decided to make my time and learn it by building an app for myself. I chose [Edamam](https://www.edamam.com/) API to serve as the back-end for this app. Edamam provides nutrition solutions to businesses in the food, health and wellness sectors, leveraging its proprietary cloud-based, structured-data semantic technology platform. 
 This project is to showcase what I learned from building apps in react native, and also as a sample for others who wants to learn mobile app development in react native.
 
